@@ -1,0 +1,88 @@
+[28-Jan-2025 17:25:07 UTC] PHP Warning:  require_once(D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes/../vendor/tecnickcom/tcpdf/tcpdf.php): Failed to open stream: No such file or directory in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 7
+[28-Jan-2025 17:25:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes/../vendor/tecnickcom/tcpdf/tcpdf.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php:7
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(199): require_once()
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#5 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 7
+[28-Jan-2025 17:28:44 UTC] PHP Warning:  require_once(D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes/../vendor/tecnickcom/tcpdf/tcpdf.php): Failed to open stream: No such file or directory in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 7
+[28-Jan-2025 17:28:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes/../vendor/tecnickcom/tcpdf/tcpdf.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php:7
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(199): require_once()
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#5 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 7
+[28-Jan-2025 17:37:01 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 17:37:01 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 8
+    [cliente_id] => 5
+    [titulo] => Sofá de madeira, estofamento espuma, revestimento vinil, três lugares, cor preta.
+    [descricao] => dfgdfg
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-28 03:08:30
+    [data_modificacao] => 2025-01-28 03:08:30
+    [cliente_nome] => Felipe Velez2222222
+    [cliente_email] => wpcriativo@gmail.com
+    [cliente_telefone] => 21980649966
+    [cliente_endereco] => SQN 306 BLOCO K
+)
+
+[28-Jan-2025 17:37:01 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 17:37:01 UTC] Itens da proposta: Array
+(
+)
+
+[28-Jan-2025 17:37:01 UTC] Cláusulas da proposta: Array
+(
+    [validade] => 15 dias
+    [pagamento] => À vista ou em até 3x no cartão
+    [prazo_execucao] => Conforme acordo entre as partes
+    [observacoes] => 1. Os preços podem sofrer alterações sem aviso prévio
+2. Proposta sujeita à aprovação de crédito
+)
+
+[28-Jan-2025 17:37:04 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 17:37:04 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 8
+    [cliente_id] => 5
+    [titulo] => Sofá de madeira, estofamento espuma, revestimento vinil, três lugares, cor preta.
+    [descricao] => dfgdfg
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-28 03:08:30
+    [data_modificacao] => 2025-01-28 03:08:30
+    [cliente_nome] => Felipe Velez2222222
+    [cliente_email] => wpcriativo@gmail.com
+    [cliente_telefone] => 21980649966
+    [cliente_endereco] => SQN 306 BLOCO K
+)
+
+[28-Jan-2025 17:37:04 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 17:37:04 UTC] Itens da proposta: Array
+(
+)
+
+[28-Jan-2025 17:37:04 UTC] Cláusulas da proposta: Array
+(
+    [validade] => 15 dias
+    [pagamento] => À vista ou em até 3x no cartão
+    [prazo_execucao] => Conforme acordo entre as partes
+    [observacoes] => 1. Os preços podem sofrer alterações sem aviso prévio
+2. Proposta sujeita à aprovação de crédito
+)
+
