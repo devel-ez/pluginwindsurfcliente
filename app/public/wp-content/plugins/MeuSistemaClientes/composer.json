@@ -1,0 +1,13 @@
+{
+    "name": "meusistemaclientes/meu-sistema-clientes",
+    "description": "Sistema de gerenciamento de clientes para WordPress",
+    "type": "wordpress-plugin",
+    "require": {
+        "tecnickcom/tcpdf": "^6.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "MeuSistemaClientes\\": "includes/"
+        }
+    }
+}
