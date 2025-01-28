@@ -86,3 +86,8 @@ Stack trace:
 2. Proposta sujeita à aprovação de crédito
 )
 
+[28-Jan-2025 17:55:29 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 17:55:29 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta

@@ -3,8 +3,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Incluir TCPDF
+// Incluir TCPDF e classe customizada
 require_once(plugin_dir_path(__FILE__) . '../vendor/tecnickcom/tcpdf/tcpdf.php');
+require_once(plugin_dir_path(__FILE__) . 'class-msc-pdf-custom.php');
 
 class MSC_PDF_Generator {
     private $pdf;
@@ -24,8 +25,6 @@ class MSC_PDF_Generator {
             $proposta_id
         ));
 
-        error_log('Dados da proposta: ' . print_r($proposta, true));
-
         if (!$proposta) {
             wp_die('Proposta não encontrada');
         }
@@ -39,80 +38,112 @@ class MSC_PDF_Generator {
             $proposta_id
         ));
 
-        error_log('Itens da proposta: ' . print_r($itens, true));
-
         // Buscar cláusulas da proposta
         $clausulas = get_option('msc_clausulas_padrao', array());
-        error_log('Cláusulas da proposta: ' . print_r($clausulas, true));
 
-        // Inicializar TCPDF
-        $this->pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+        // Inicializar TCPDF customizado
+        $this->pdf = new MSC_TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
         // Configurar documento
         $this->pdf->SetCreator(PDF_CREATOR);
-        $this->pdf->SetAuthor('Meu Sistema Clientes');
+        $this->pdf->SetAuthor(get_option('blogname'));
         $this->pdf->SetTitle('Proposta - ' . $proposta->titulo);
 
-        // Remover header/footer padrão
-        $this->pdf->setPrintHeader(false);
-        $this->pdf->setPrintFooter(false);
-
         // Configurar margens
-        $this->pdf->SetMargins(15, 15, 15);
+        $this->pdf->SetMargins(15, 50, 15);
+        $this->pdf->SetHeaderMargin(20);
+        $this->pdf->SetFooterMargin(25);
+
+        // Habilitar header e footer
+        $this->pdf->setPrintHeader(true);
+        $this->pdf->setPrintFooter(true);
 
         // Adicionar página
         $this->pdf->AddPage();
 
-        // Definir fonte
+        // Definir fonte padrão
         $this->pdf->SetFont('helvetica', '', 12);
 
-        // Cabeçalho da proposta
-        $this->pdf->SetFont('helvetica', 'B', 20);
-        $this->pdf->Cell(0, 10, 'PROPOSTA COMERCIAL', 0, 1, 'C');
+        // Número da proposta e data
+        $this->pdf->SetFont('helvetica', 'B', 12);
+        $this->pdf->Cell(0, 10, 'PROPOSTA Nº ' . str_pad($proposta_id, 5, '0', STR_PAD_LEFT), 0, 1, 'R');
+        $this->pdf->SetFont('helvetica', '', 12);
+        $this->pdf->Cell(0, 10, 'Data: ' . date('d/m/Y'), 0, 1, 'R');
         $this->pdf->Ln(10);
 
-        // Informações do cliente
+        // Título da proposta com estilo moderno
+        $this->pdf->SetFillColor(41, 128, 185);
+        $this->pdf->SetTextColor(255, 255, 255);
+        $this->pdf->SetFont('helvetica', 'B', 20);
+        $this->pdf->Cell(0, 15, 'PROPOSTA COMERCIAL', 0, 1, 'C', true);
+        $this->pdf->SetTextColor(0, 0, 0);
+        $this->pdf->Ln(10);
+
+        // Box com informações do cliente
+        $this->pdf->SetFillColor(245, 245, 245);
         $this->pdf->SetFont('helvetica', 'B', 14);
-        $this->pdf->Cell(0, 10, 'Dados do Cliente', 0, 1, 'L');
+        $this->pdf->Cell(0, 10, 'DADOS DO CLIENTE', 0, 1, 'L');
         $this->pdf->SetFont('helvetica', '', 12);
-        $this->pdf->Cell(0, 7, 'Nome: ' . $proposta->cliente_nome, 0, 1, 'L');
+        
+        $this->pdf->RoundedRect(15, $this->pdf->GetY(), 180, 40, 3.50, '1111', 'DF', array(), array(245, 245, 245));
+        $this->pdf->Ln(5);
+        
+        $this->pdf->Cell(30, 7, 'Nome:', 0, 0, 'L');
+        $this->pdf->Cell(0, 7, $proposta->cliente_nome, 0, 1, 'L');
+        
         if ($proposta->cliente_email) {
-            $this->pdf->Cell(0, 7, 'Email: ' . $proposta->cliente_email, 0, 1, 'L');
+            $this->pdf->Cell(30, 7, 'Email:', 0, 0, 'L');
+            $this->pdf->Cell(0, 7, $proposta->cliente_email, 0, 1, 'L');
         }
+        
         if ($proposta->cliente_telefone) {
-            $this->pdf->Cell(0, 7, 'Telefone: ' . $proposta->cliente_telefone, 0, 1, 'L');
+            $this->pdf->Cell(30, 7, 'Telefone:', 0, 0, 'L');
+            $this->pdf->Cell(0, 7, $proposta->cliente_telefone, 0, 1, 'L');
         }
+        
         if ($proposta->cliente_endereco) {
-            $this->pdf->Cell(0, 7, 'Endereço: ' . $proposta->cliente_endereco, 0, 1, 'L');
+            $this->pdf->Cell(30, 7, 'Endereço:', 0, 0, 'L');
+            $this->pdf->Cell(0, 7, $proposta->cliente_endereco, 0, 1, 'L');
         }
+        
         $this->pdf->Ln(10);
 
         // Detalhes da proposta
+        $this->pdf->SetFillColor(41, 128, 185);
+        $this->pdf->SetTextColor(255, 255, 255);
         $this->pdf->SetFont('helvetica', 'B', 14);
-        $this->pdf->Cell(0, 10, $proposta->titulo, 0, 1, 'L');
+        $this->pdf->Cell(0, 10, $proposta->titulo, 0, 1, 'L', true);
+        $this->pdf->SetTextColor(0, 0, 0);
         $this->pdf->SetFont('helvetica', '', 12);
+        
         if ($proposta->descricao) {
+            $this->pdf->Ln(5);
             $this->pdf->MultiCell(0, 7, $proposta->descricao, 0, 'L');
             $this->pdf->Ln(5);
         }
 
-        // Tabela de serviços
+        // Tabela de serviços com design moderno
         if (!empty($itens)) {
+            $this->pdf->Ln(5);
+            $this->pdf->SetFillColor(41, 128, 185);
+            $this->pdf->SetTextColor(255, 255, 255);
             $this->pdf->SetFont('helvetica', 'B', 14);
-            $this->pdf->Cell(0, 10, 'Serviços', 0, 1, 'L');
+            $this->pdf->Cell(0, 10, 'SERVIÇOS E PRODUTOS', 0, 1, 'L', true);
+            $this->pdf->SetTextColor(0, 0, 0);
             $this->pdf->SetFont('helvetica', '', 12);
 
             // Cabeçalho da tabela
-            $this->pdf->SetFillColor(240, 240, 240);
-            $this->pdf->Cell(80, 7, 'Serviço', 1, 0, 'L', true);
-            $this->pdf->Cell(25, 7, 'Qtd', 1, 0, 'C', true);
-            $this->pdf->Cell(35, 7, 'Valor Unit.', 1, 0, 'R', true);
-            $this->pdf->Cell(35, 7, 'Total', 1, 1, 'R', true);
+            $this->pdf->SetFillColor(245, 245, 245);
+            $this->pdf->Cell(80, 8, 'Serviço', 1, 0, 'L', true);
+            $this->pdf->Cell(25, 8, 'Qtd', 1, 0, 'C', true);
+            $this->pdf->Cell(35, 8, 'Valor Unit.', 1, 0, 'R', true);
+            $this->pdf->Cell(35, 8, 'Total', 1, 1, 'R', true);
 
-            // Itens da tabela
+            // Itens da tabela com cores alternadas
             $total_geral = 0;
+            $linha = 0;
             foreach ($itens as $item) {
-                // Se não tiver valor_unitario, usar o valor padrão do serviço
+                $fill = $linha % 2 == 0;
                 if (empty($item->valor_unitario)) {
                     $item->valor_unitario = $item->valor_padrao;
                 }
@@ -123,33 +154,41 @@ class MSC_PDF_Generator {
                 }
                 $total_geral += $total_item;
 
-                $this->pdf->Cell(80, 7, $item->servico_nome, 1, 0, 'L');
-                $this->pdf->Cell(25, 7, $item->quantidade, 1, 0, 'C');
-                $this->pdf->Cell(35, 7, 'R$ ' . number_format($item->valor_unitario, 2, ',', '.'), 1, 0, 'R');
-                $this->pdf->Cell(35, 7, 'R$ ' . number_format($total_item, 2, ',', '.'), 1, 1, 'R');
+                $this->pdf->SetFillColor(252, 252, 252);
+                $this->pdf->Cell(80, 8, $item->servico_nome, 1, 0, 'L', $fill);
+                $this->pdf->Cell(25, 8, $item->quantidade, 1, 0, 'C', $fill);
+                $this->pdf->Cell(35, 8, 'R$ ' . number_format($item->valor_unitario, 2, ',', '.'), 1, 0, 'R', $fill);
+                $this->pdf->Cell(35, 8, 'R$ ' . number_format($total_item, 2, ',', '.'), 1, 1, 'R', $fill);
 
-                // Se tiver desconto, mostrar em uma linha separada
                 if (!empty($item->desconto)) {
                     $this->pdf->SetFont('helvetica', 'I', 10);
-                    $this->pdf->Cell(140, 5, 'Desconto:', 0, 0, 'R');
-                    $this->pdf->Cell(35, 5, '- R$ ' . number_format($item->desconto, 2, ',', '.'), 0, 1, 'R');
+                    $this->pdf->Cell(140, 6, 'Desconto:', 0, 0, 'R');
+                    $this->pdf->Cell(35, 6, '- R$ ' . number_format($item->desconto, 2, ',', '.'), 0, 1, 'R');
                     $this->pdf->SetFont('helvetica', '', 12);
                 }
+                $linha++;
             }
 
-            // Total geral
+            // Total geral com destaque
+            $this->pdf->SetFillColor(41, 128, 185);
+            $this->pdf->SetTextColor(255, 255, 255);
             $this->pdf->SetFont('helvetica', 'B', 12);
-            $this->pdf->Cell(140, 7, 'Total Geral:', 1, 0, 'R');
-            $this->pdf->Cell(35, 7, 'R$ ' . number_format($total_geral, 2, ',', '.'), 1, 1, 'R');
+            $this->pdf->Cell(140, 10, 'TOTAL GERAL:', 1, 0, 'R', true);
+            $this->pdf->Cell(35, 10, 'R$ ' . number_format($total_geral, 2, ',', '.'), 1, 1, 'R', true);
+            $this->pdf->SetTextColor(0, 0, 0);
         }
 
-        // Cláusulas e condições
+        // Cláusulas e condições com estilo moderno
         $this->pdf->Ln(10);
+        $this->pdf->SetFillColor(41, 128, 185);
+        $this->pdf->SetTextColor(255, 255, 255);
         $this->pdf->SetFont('helvetica', 'B', 14);
-        $this->pdf->Cell(0, 10, 'Condições Gerais', 0, 1, 'L');
+        $this->pdf->Cell(0, 10, 'CONDIÇÕES GERAIS', 0, 1, 'L', true);
+        $this->pdf->SetTextColor(0, 0, 0);
         $this->pdf->SetFont('helvetica', '', 12);
 
         if (!empty($clausulas)) {
+            $this->pdf->Ln(5);
             if (isset($clausulas['validade'])) {
                 $this->pdf->MultiCell(0, 7, '• Validade da proposta: ' . $clausulas['validade'], 0, 'L');
             }
@@ -167,10 +206,13 @@ class MSC_PDF_Generator {
 
         // Local e data
         $this->pdf->Ln(20);
+        $this->pdf->SetFont('helvetica', '', 12);
         $this->pdf->Cell(0, 7, get_option('blogname') . ', ' . date('d/m/Y'), 0, 1, 'C');
 
-        // Assinaturas
+        // Assinaturas com linhas estilizadas
         $this->pdf->Ln(20);
+        $this->pdf->SetDrawColor(41, 128, 185);
+        $this->pdf->SetLineWidth(0.5);
         $this->pdf->Cell(85, 0, '', 'T', 0, 'C');
         $this->pdf->Cell(20, 0, '', 0, 0, 'C');
         $this->pdf->Cell(85, 0, '', 'T', 1, 'C');
