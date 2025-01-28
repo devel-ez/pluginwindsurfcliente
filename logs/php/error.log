@@ -131,3 +131,1891 @@ Stack trace:
              FROM wp_msc_proposta_itens pi
              LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
              WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:17:36 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:17:36 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:18:31 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:18:31 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:18:41 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:18:41 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:18:48 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:18:48 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:19:19 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:19:19 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:19:37 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:19:37 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:23:35 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:23:35 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:23:36 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:23:36 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:23:47 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:23:47 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:23:48 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:23:48 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:24:03 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:24:03 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:24:21 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:24:21 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:24:27 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:24:27 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:34:13 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:35:10 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:35:10 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:35:17 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:35:17 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:37:13 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:37:13 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:37:13 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:37:13 UTC] Itens encontrados: Array
+(
+)
+
+[28-Jan-2025 18:37:22 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:37:22 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:37:22 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:37:22 UTC] Itens encontrados: Array
+(
+)
+
+[28-Jan-2025 18:37:53 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:37:53 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:37:53 UTC] Itens encontrados: Array
+(
+)
+
+[28-Jan-2025 18:38:23 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:38:23 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:38:23 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 18:38:40 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:38:40 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:38:40 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 18:41:21 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:41:21 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:41:21 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 18:42:55 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:42:55 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:42:55 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 18:44:34 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:44:34 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:44:34 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 18:51:33 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:51:33 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:51:33 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 18:51:56 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:51:56 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 18:51:56 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:16:21 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:16:21 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:16:21 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:17:01 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:17:01 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:17:01 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:17:22 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:17:22 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:17:22 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:18:57 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:18:57 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:18:57 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:20:29 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:20:29 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:20:29 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:22:56 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:22:56 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:22:56 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:23:12 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:23:12 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:23:12 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:28:42 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:28:42 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:28:42 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:32:24 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:32:24 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:32:24 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:33:29 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:33:29 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:33:29 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:33:52 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:33:52 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:33:52 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:49:37 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:49:37 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:49:37 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:53:30 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:53:30 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:53:30 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:53:36 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:53:36 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:53:36 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:54:02 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:54:02 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:54:02 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:58:57 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:58:57 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:58:57 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:59:01 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:59:01 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:59:01 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:59:04 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:59:04 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:59:04 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 19:59:16 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 19:59:16 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 19:59:16 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:03:02 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:03:02 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:03:02 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:06:50 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:06:50 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:06:50 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:13:32 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:13:32 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:13:32 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:15:29 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:15:29 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:15:29 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:15:49 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:15:49 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:15:49 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:16:03 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:16:03 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:16:03 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:16:29 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:16:29 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:16:29 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:16:41 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:16:41 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:16:41 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:16:47 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:16:47 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:16:47 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:36:22 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:36:22 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:36:22 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:38:19 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:38:19 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:38:19 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:39:38 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:39:38 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:39:38 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:40:11 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:40:11 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:40:11 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:41:54 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:41:54 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:41:54 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:48:57 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:48:57 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:48:57 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:49:07 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:49:07 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:49:07 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:51:05 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:51:05 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:51:05 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:51:08 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:51:08 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:51:08 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:52:26 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:52:26 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:52:26 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:52:29 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:52:29 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:52:29 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:54:31 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:54:31 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:54:31 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:54:58 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:54:58 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:54:58 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:56:10 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:56:10 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:56:10 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 20:56:39 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 20:56:39 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 20:56:39 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 21:00:40 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 21:00:40 UTC] SQL Query: SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8
+[28-Jan-2025 21:00:40 UTC] Itens encontrados: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 2
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 1
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 3
+            [proposta_id] => 8
+            [servico_id] => 1
+            [quantidade] => 2
+            [valor_unitario] => 60.00
+            [desconto] => 0.00
+            [servico_nome] => Hospedagem
+            [servico_descricao] => 
+            [valor_padrao] => 60.00
+        )
+
+)
+
+[28-Jan-2025 21:57:20 UTC] PHP Parse error:  Unmatched '}' in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 257
+[28-Jan-2025 21:57:22 UTC] PHP Parse error:  Unmatched '}' in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 257

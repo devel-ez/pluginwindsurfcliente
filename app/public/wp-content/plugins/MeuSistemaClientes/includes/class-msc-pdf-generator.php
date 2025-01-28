@@ -9,12 +9,14 @@ require_once(plugin_dir_path(__FILE__) . '../vendor/autoload.php');
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-class MSC_PDF_Generator {
-    public function gerar_pdf_proposta($proposta_id) {
+class MSC_PDF_Generator
+{
+    public function gerar_pdf_proposta($proposta_id)
+    {
         global $wpdb;
 
-        // Debug
-        error_log('Gerando PDF para proposta ID: ' . $proposta_id);
+        // Buscar a URL da assinatura das configurações
+        $assinatura_url = get_option('msc_assinatura_url', '');
 
         // Buscar dados da proposta
         $proposta = $wpdb->get_row($wpdb->prepare(
@@ -38,24 +40,26 @@ class MSC_PDF_Generator {
             $proposta_id
         ));
 
-        error_log('SQL Query: ' . $wpdb->last_query);
-        error_log('Itens encontrados: ' . print_r($itens, true));
-
         // Buscar cláusulas da proposta
         $clausulas = get_option('msc_clausulas_padrao', array());
 
-        // Configurações do Dompdf
+        // Configurar Dompdf
         $options = new Options();
         $options->set('defaultFont', 'Helvetica');
+        $options->set('isRemoteEnabled', true);
+        $options->set('isHtml5ParserEnabled', true);
         $dompdf = new Dompdf($options);
 
+        // Caminho absoluto da imagem da capa
+        $caminho_capa = site_url('/wp-content/plugins/MeuSistemaClientes/assets/images/capa.png');
+
         // Gerar HTML do PDF
-        $html = $this->renderizar_html_proposta($proposta, $itens, $clausulas);
+        $html = $this->renderizar_html_proposta($proposta, $itens, $clausulas, $caminho_capa, $assinatura_url);
 
         // Carregar HTML no Dompdf
         $dompdf->loadHtml($html);
 
-        // (Opcional) Definir o tamanho do papel e a orientação
+        // Definir o tamanho do papel e a orientação
         $dompdf->setPaper('A4', 'portrait');
 
         // Renderizar o PDF
@@ -65,58 +69,178 @@ class MSC_PDF_Generator {
         $dompdf->stream('proposta_' . $proposta_id . '.pdf', array('Attachment' => 0));
     }
 
-    private function renderizar_html_proposta($proposta, $itens, $clausulas) {
+    private function renderizar_html_proposta($proposta, $itens, $clausulas, $caminho_capa, $assinatura_url)
+    {
         ob_start();
-        ?>
+?>
         <html>
+
         <head>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
             <style>
-                body { font-family: Helvetica, sans-serif; background-color: #f8f9fa; }
-                .header { background-color: #343a40; color: white; text-align: center; padding: 5px; }
-                .container { margin-top: 20px; }
-                .table { width: 100%; margin-top: 20px; border: 1px solid #ddd; }
-                .table th { background-color: #007bff; color: white; }
-                .footer { margin-top: 30px; text-align: center; font-size: 12px; color: #555; }
-                h2 { margin-top: 20px; }
-                h3 { margin-top: 15px; }
-                .section { margin-bottom: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: white; }
-                .badge-custom { background-color: #007bff; color: white; }
+                @page {
+                    size: A4;
+                    margin: 0;
+                }
+
+                body {
+                    font-family: Helvetica, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                /* Página da capa */
+                .capa {
+                    width: 210mm;
+                    height: 297mm;
+                    background: url('<?php echo $caminho_capa; ?>') no-repeat center center;
+                    background-size: cover;
+                    position: relative;
+                }
+
+                /* Posicionamento dos textos */
+                .texto {
+                    position: absolute;
+                    width: 100%;
+                    text-align: left;
+                    color: white;
+                    font-weight: bold;
+                }
+
+                .proposta {
+                    top: 22mm;
+                    left: 25mm;
+                    font-size: 12pt;
+                }
+
+                .titulo {
+                    top: 90mm;
+                    left: 25mm;
+                    font-size: 50pt;
+                    font-weight: bold;
+                }
+
+                .data {
+                    top: 225mm;
+                    left: 140mm;
+                    font-size: 12pt;
+                    color: #E3002B;
+                }
+
+                .ano {
+                    top: 232mm;
+                    left: 140mm;
+                    font-size: 18pt;
+                    font-weight: bold;
+                    color: #000;
+                }
+
+                .autor {
+                    top: 255mm;
+                    left: 25mm;
+                    font-size: 12pt;
+                    color: #E3002B;
+                }
+
+                .nome {
+                    top: 260mm;
+                    left: 25mm;
+                    font-size: 12pt;
+                    font-weight: bold;
+                    color: #000;
+                }
+
+                /* Forçar quebra de página após capa */
+                .pagina {
+                    padding: 20px;
+                    page-break-before: always;
+                }
+
+                .header {
+                    background-color: #343a40;
+                    color: white;
+                    text-align: center;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                }
+
+                .section {
+                    margin-bottom: 20px;
+                    padding: 15px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    background-color: white;
+                }
+
+                .table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 20px;
+                }
+
+                .table th,
+                .table td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    text-align: left;
+                }
+
+                .table th {
+                    background-color: #007bff;
+                    color: white;
+                }
+
+                .footer {
+                    margin-top: 30px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #555;
+                }
+
+                .titulo-proposta {
+                    font-size: 22pt;
+                    font-weight: bold;
+                    color: #2C3E50;
+                    /* Cor azul escuro para elegância */
+                    text-transform: uppercase;
+                    border-bottom: 3px solid #007bff;
+                    /* Linha azul para destacar o título */
+                    padding-bottom: 5px;
+                    margin-bottom: 15px;
+                }
+
+                .descricao-proposta {
+                    font-size: 12pt;
+                    color: #333;
+                    /* Cinza escuro para facilitar a leitura */
+                    line-height: 1.6;
+                    /* Melhor espaçamento entre linhas */
+                    text-align: justify;
+                    margin-bottom: 20px;
+                }
             </style>
         </head>
+
         <body>
-            <header class="header">
-                <h1>Proposta de desenvolvimento</h1>
-                <p>
-                    <span class="badge badge-light text-primary px-3 py-2">
-                        Proposta nº <?php echo str_pad($proposta->id, 5, '0', STR_PAD_LEFT); ?>
-                    </span>
-                    <span>
-                        <i class="fas fa-calendar-alt"></i> Data: <?php echo date('d/m/Y'); ?>
-                    </span>
-                </p>
-            </header>
-            <div class="container">
+            <!-- Página da Capa -->
+            <div class="capa">
+                <div class="texto proposta">PROPOSTA Nº <?php echo str_pad($proposta->id, 5, '0', STR_PAD_LEFT); ?></div>
+                <div class="texto titulo">Projeto de Desenvolvimento</div>
+                <div class="texto data" style="margin-top: 110px;">28 de janeiro de 2025</div>
+                <div class="texto ano" style="margin-top: 110px;">2025</div>
+                <div class="texto autor">Apresentado por</div>
+                <div class="texto nome">Felipe Velêz</div>
+            </div>
+
+            <!-- Página 2 - Conteúdo da proposta -->
+            <div class="pagina">
+
                 <div class="section">
-                    <h2><?php echo $proposta->titulo; ?></h2>
-                    <p><?php echo nl2br($proposta->descricao); ?></p>
-                </div>
-                <div class="section">
-                    <h3>DADOS DO CLIENTE</h3>
-                    <p>Nome: <?php echo $proposta->cliente_nome; ?></p>
-                    <?php if ($proposta->cliente_email): ?>
-                    <p>Email: <?php echo $proposta->cliente_email; ?></p>
-                    <?php endif; ?>
-                    <?php if ($proposta->cliente_telefone): ?>
-                    <p>Telefone: <?php echo $proposta->cliente_telefone; ?></p>
-                    <?php endif; ?>
-                    <?php if ($proposta->cliente_endereco): ?>
-                    <p>Endereço: <?php echo $proposta->cliente_endereco; ?></p>
-                    <?php endif; ?>
+                    <h2 class="titulo-proposta"><?php echo $proposta->titulo; ?></h2>
+                    <p class="descricao-proposta"><?php echo nl2br($proposta->descricao); ?></p>
                 </div>
                 <div class="section">
                     <h3>PRODUTOS E SERVIÇOS</h3>
-                    <table class="table table-bordered">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>Serviço</th>
@@ -126,51 +250,80 @@ class MSC_PDF_Generator {
                             </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($itens as $item): ?>
-                            <tr>
-                                <td><?php echo $item->servico_nome; ?></td>
-                                <td><?php echo $item->quantidade; ?></td>
-                                <td>R$ <?php echo number_format($item->valor_unitario, 2, ',', '.'); ?></td>
-                                <td>R$ <?php echo number_format($item->quantidade * $item->valor_unitario, 2, ',', '.'); ?></td>
-                            </tr>
-                        <?php endforeach; ?>
+                            <?php
+                            $totalGeral = 0; // Variável para armazenar o total geral
+                            foreach ($itens as $item):
+                                $totalItem = $item->quantidade * $item->valor_unitario; // Total por item
+                                $totalGeral += $totalItem; // Soma do total geral
+                            ?>
+                                <tr>
+                                    <td><?php echo $item->servico_nome; ?></td>
+                                    <td><?php echo $item->quantidade; ?></td>
+                                    <td>R$ <?php echo number_format($item->valor_unitario, 2, ',', '.'); ?></td>
+                                    <td>R$ <?php echo number_format($totalItem, 2, ',', '.'); ?></td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" style="text-align: right;"><strong>Total Geral:</strong></td>
+                                <td><strong>R$ <?php echo number_format($totalGeral, 2, ',', '.'); ?></strong></td>
+                            </tr>
+                        </tfoot>
                     </table>
-                </div>
-                <div class="section">
-                    <h3>CONDIÇÕES GERAIS</h3>
-                    <?php if (!empty($clausulas)): ?>
-                    <ul>
-                    <?php foreach ($clausulas as $clausula => $valor): ?>
-                        <li><?php echo ucfirst($clausula) . ': ' . $valor; ?></li>
-                    <?php endforeach; ?>
-                    </ul>
-                    <?php endif; ?>
+
+                    <div class="section">
+                        <h3>Cláusulas da Proposta</h3>
+                        <p><strong>Validade da Proposta:</strong> <?php echo $clausulas['validade']; ?></p>
+                        <p><strong>Forma de Pagamento:</strong> <?php echo nl2br($clausulas['pagamento']); ?></p>
+                        <p><strong>Prazo de Execução:</strong> <?php echo nl2br($clausulas['prazo_execucao']); ?></p>
+                        <p><strong>Observações:</strong> <?php echo nl2br($clausulas['observacoes']); ?></p>
+                    </div>
+
+                    <!-- Adicionar Assinatura e Data -->
+                    <div class="section" style="margin-top: 50px; text-align: center;">
+                        <p><strong>Assinatura do Responsável:</strong></p>
+                        <?php if (!empty($assinatura_url)): ?>
+                            <img src="<?php echo $assinatura_url; ?>" alt="Assinatura do Responsável" style="max-height: 100px; margin: 10px 0;">
+                        <?php else: ?>
+                            <p style="font-style: italic; color: #555;">Assinatura não configurada.</p>
+                        <?php endif; ?>
+                        <p><strong>Data:</strong> <?php echo date('d/m/Y'); ?></p>
+                    </div>
+
                 </div>
             </div>
+
             <div class="footer">
                 <p>Obrigado por escolher nossos serviços!</p>
             </div>
         </body>
+
         </html>
-        <?php
+<?php
         return ob_get_clean();
     }
 }
 
-class MSC_PDF_Generator_Proposta {
+
+
+class MSC_PDF_Generator_Proposta
+{
     private $pdf_generator;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->pdf_generator = new MSC_PDF_Generator();
     }
 
-    public function gerar_pdf_proposta($proposta_id) {
+    public function gerar_pdf_proposta($proposta_id)
+    {
         $this->pdf_generator->gerar_pdf_proposta($proposta_id);
     }
 }
 
-function msc_gerar_pdf_proposta($proposta_id) {
+function msc_gerar_pdf_proposta($proposta_id)
+{
     $pdf_generator = new MSC_PDF_Generator_Proposta();
     $pdf_generator->gerar_pdf_proposta($proposta_id);
 }
