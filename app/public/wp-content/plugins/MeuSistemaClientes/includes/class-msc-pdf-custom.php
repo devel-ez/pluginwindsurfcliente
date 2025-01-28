@@ -8,18 +8,16 @@ class MSC_TCPDF extends TCPDF {
         // Get the current page width
         $pageWidth = $this->getPageWidth();
         
-        // Add a gradient background to the header
-        $this->Rect(0, 0, $pageWidth, 40, 'F', array(), array(41, 128, 185, 255, 0, 51, 153, 255));
-        
         // Add company logo if it exists
         $logo_path = plugin_dir_path(dirname(__FILE__)) . 'assets/images/logo.png';
         if (file_exists($logo_path)) {
-            $this->Image($logo_path, 15, 10, 50);
+            // Diminuindo o tamanho da logo para 30 de altura
+            $this->Image($logo_path, 15, 10, 30);
         }
         
         // Add decorative line
-        $this->SetLineStyle(array('width' => 0.5, 'color' => array(255, 255, 255)));
-        $this->Line(15, 35, $pageWidth - 15, 35);
+        $this->SetLineStyle(array('width' => 0.5, 'color' => array(41, 128, 185)));
+        $this->Line(15, 45, $pageWidth - 15, 45);
     }
 
     public function Footer() {

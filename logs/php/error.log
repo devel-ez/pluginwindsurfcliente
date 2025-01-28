@@ -91,3 +91,28 @@ Stack trace:
              FROM wp_msc_proposta_itens pi
              LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
              WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 17:58:44 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 17:58:44 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 17:58:51 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 17:58:51 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 17:58:56 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 17:58:56 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 17:59:09 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 17:59:09 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[28-Jan-2025 18:01:12 UTC] Gerando PDF para proposta ID: 8
+[28-Jan-2025 18:01:12 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta

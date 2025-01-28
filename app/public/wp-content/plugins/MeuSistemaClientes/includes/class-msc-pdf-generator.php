@@ -50,7 +50,7 @@ class MSC_PDF_Generator {
         $this->pdf->SetTitle('Proposta - ' . $proposta->titulo);
 
         // Configurar margens
-        $this->pdf->SetMargins(15, 50, 15);
+        $this->pdf->SetMargins(15, 60, 15);
         $this->pdf->SetHeaderMargin(20);
         $this->pdf->SetFooterMargin(25);
 
@@ -69,7 +69,7 @@ class MSC_PDF_Generator {
         $this->pdf->Cell(0, 10, 'PROPOSTA Nº ' . str_pad($proposta_id, 5, '0', STR_PAD_LEFT), 0, 1, 'R');
         $this->pdf->SetFont('helvetica', '', 12);
         $this->pdf->Cell(0, 10, 'Data: ' . date('d/m/Y'), 0, 1, 'R');
-        $this->pdf->Ln(10);
+        $this->pdf->Ln(5);
 
         // Título da proposta com estilo moderno
         $this->pdf->SetFillColor(41, 128, 185);
@@ -77,7 +77,7 @@ class MSC_PDF_Generator {
         $this->pdf->SetFont('helvetica', 'B', 20);
         $this->pdf->Cell(0, 15, 'PROPOSTA COMERCIAL', 0, 1, 'C', true);
         $this->pdf->SetTextColor(0, 0, 0);
-        $this->pdf->Ln(10);
+        $this->pdf->Ln(5);
 
         // Box com informações do cliente
         $this->pdf->SetFillColor(245, 245, 245);
