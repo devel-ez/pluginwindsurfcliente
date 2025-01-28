@@ -11,8 +11,8 @@ class MSC_TCPDF extends TCPDF {
         // Add company logo if it exists
         $logo_path = plugin_dir_path(dirname(__FILE__)) . 'assets/images/logo.png';
         if (file_exists($logo_path)) {
-            // Diminuindo o tamanho da logo para 30 de altura
-            $this->Image($logo_path, 15, 10, 30);
+            // Diminuindo o tamanho da logo para 20 de altura
+            $this->Image($logo_path, 15, 10, 20);
         }
         
         // Add decorative line
