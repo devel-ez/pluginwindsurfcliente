@@ -3,13 +3,13 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Incluir TCPDF e classe customizada
-require_once(plugin_dir_path(__FILE__) . '../vendor/tecnickcom/tcpdf/tcpdf.php');
-require_once(plugin_dir_path(__FILE__) . 'class-msc-pdf-custom.php');
+// Incluir Dompdf
+require_once(plugin_dir_path(__FILE__) . '../vendor/autoload.php');
+
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class MSC_PDF_Generator {
-    private $pdf;
-
     public function gerar_pdf_proposta($proposta_id) {
         global $wpdb;
 
@@ -38,193 +38,123 @@ class MSC_PDF_Generator {
             $proposta_id
         ));
 
+        error_log('SQL Query: ' . $wpdb->last_query);
+        error_log('Itens encontrados: ' . print_r($itens, true));
+
         // Buscar cláusulas da proposta
         $clausulas = get_option('msc_clausulas_padrao', array());
 
-        // Inicializar TCPDF customizado
-        $this->pdf = new MSC_TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+        // Configurações do Dompdf
+        $options = new Options();
+        $options->set('defaultFont', 'Helvetica');
+        $dompdf = new Dompdf($options);
 
-        // Configurar documento
-        $this->pdf->SetCreator(PDF_CREATOR);
-        $this->pdf->SetAuthor(get_option('blogname'));
-        $this->pdf->SetTitle('Proposta - ' . $proposta->titulo);
+        // Gerar HTML do PDF
+        $html = $this->renderizar_html_proposta($proposta, $itens, $clausulas);
 
-        // Configurar margens
-        $this->pdf->SetMargins(15, 60, 15);
-        $this->pdf->SetHeaderMargin(20);
-        $this->pdf->SetFooterMargin(25);
+        // Carregar HTML no Dompdf
+        $dompdf->loadHtml($html);
 
-        // Habilitar header e footer
-        $this->pdf->setPrintHeader(true);
-        $this->pdf->setPrintFooter(true);
+        // (Opcional) Definir o tamanho do papel e a orientação
+        $dompdf->setPaper('A4', 'portrait');
 
-        // Adicionar página
-        $this->pdf->AddPage();
+        // Renderizar o PDF
+        $dompdf->render();
 
-        // Definir fonte padrão
-        $this->pdf->SetFont('helvetica', '', 12);
+        // Enviar o PDF para o navegador
+        $dompdf->stream('proposta_' . $proposta_id . '.pdf', array('Attachment' => 0));
+    }
 
-        // Número da proposta e data
-        $this->pdf->SetFont('helvetica', 'B', 12);
-        $this->pdf->Cell(0, 10, 'PROPOSTA Nº ' . str_pad($proposta_id, 5, '0', STR_PAD_LEFT), 0, 1, 'R');
-        $this->pdf->SetFont('helvetica', '', 12);
-        $this->pdf->Cell(0, 10, 'Data: ' . date('d/m/Y'), 0, 1, 'R');
-        $this->pdf->Ln(5);
-
-        // Título da proposta com estilo moderno
-        $this->pdf->SetFillColor(41, 128, 185);
-        $this->pdf->SetTextColor(255, 255, 255);
-        $this->pdf->SetFont('helvetica', 'B', 20);
-        $this->pdf->Cell(0, 15, 'PROPOSTA COMERCIAL', 0, 1, 'C', true);
-        $this->pdf->SetTextColor(0, 0, 0);
-        $this->pdf->Ln(5);
-
-        // Box com informações do cliente
-        $this->pdf->SetFillColor(245, 245, 245);
-        $this->pdf->SetFont('helvetica', 'B', 14);
-        $this->pdf->Cell(0, 10, 'DADOS DO CLIENTE', 0, 1, 'L');
-        $this->pdf->SetFont('helvetica', '', 12);
-        
-        $this->pdf->RoundedRect(15, $this->pdf->GetY(), 180, 40, 3.50, '1111', 'DF', array(), array(245, 245, 245));
-        $this->pdf->Ln(5);
-        
-        $this->pdf->Cell(30, 7, 'Nome:', 0, 0, 'L');
-        $this->pdf->Cell(0, 7, $proposta->cliente_nome, 0, 1, 'L');
-        
-        if ($proposta->cliente_email) {
-            $this->pdf->Cell(30, 7, 'Email:', 0, 0, 'L');
-            $this->pdf->Cell(0, 7, $proposta->cliente_email, 0, 1, 'L');
-        }
-        
-        if ($proposta->cliente_telefone) {
-            $this->pdf->Cell(30, 7, 'Telefone:', 0, 0, 'L');
-            $this->pdf->Cell(0, 7, $proposta->cliente_telefone, 0, 1, 'L');
-        }
-        
-        if ($proposta->cliente_endereco) {
-            $this->pdf->Cell(30, 7, 'Endereço:', 0, 0, 'L');
-            $this->pdf->Cell(0, 7, $proposta->cliente_endereco, 0, 1, 'L');
-        }
-        
-        $this->pdf->Ln(10);
-
-        // Detalhes da proposta
-        $this->pdf->SetFillColor(41, 128, 185);
-        $this->pdf->SetTextColor(255, 255, 255);
-        $this->pdf->SetFont('helvetica', 'B', 14);
-        $this->pdf->Cell(0, 10, $proposta->titulo, 0, 1, 'L', true);
-        $this->pdf->SetTextColor(0, 0, 0);
-        $this->pdf->SetFont('helvetica', '', 12);
-        
-        if ($proposta->descricao) {
-            $this->pdf->Ln(5);
-            $this->pdf->MultiCell(0, 7, $proposta->descricao, 0, 'L');
-            $this->pdf->Ln(5);
-        }
-
-        // Tabela de serviços com design moderno
-        if (!empty($itens)) {
-            $this->pdf->Ln(5);
-            $this->pdf->SetFillColor(41, 128, 185);
-            $this->pdf->SetTextColor(255, 255, 255);
-            $this->pdf->SetFont('helvetica', 'B', 14);
-            $this->pdf->Cell(0, 10, 'SERVIÇOS E PRODUTOS', 0, 1, 'L', true);
-            $this->pdf->SetTextColor(0, 0, 0);
-            $this->pdf->SetFont('helvetica', '', 12);
-
-            // Cabeçalho da tabela
-            $this->pdf->SetFillColor(245, 245, 245);
-            $this->pdf->Cell(80, 8, 'Serviço', 1, 0, 'L', true);
-            $this->pdf->Cell(25, 8, 'Qtd', 1, 0, 'C', true);
-            $this->pdf->Cell(35, 8, 'Valor Unit.', 1, 0, 'R', true);
-            $this->pdf->Cell(35, 8, 'Total', 1, 1, 'R', true);
-
-            // Itens da tabela com cores alternadas
-            $total_geral = 0;
-            $linha = 0;
-            foreach ($itens as $item) {
-                $fill = $linha % 2 == 0;
-                if (empty($item->valor_unitario)) {
-                    $item->valor_unitario = $item->valor_padrao;
-                }
-
-                $total_item = ($item->quantidade * $item->valor_unitario);
-                if (!empty($item->desconto)) {
-                    $total_item -= $item->desconto;
-                }
-                $total_geral += $total_item;
-
-                $this->pdf->SetFillColor(252, 252, 252);
-                $this->pdf->Cell(80, 8, $item->servico_nome, 1, 0, 'L', $fill);
-                $this->pdf->Cell(25, 8, $item->quantidade, 1, 0, 'C', $fill);
-                $this->pdf->Cell(35, 8, 'R$ ' . number_format($item->valor_unitario, 2, ',', '.'), 1, 0, 'R', $fill);
-                $this->pdf->Cell(35, 8, 'R$ ' . number_format($total_item, 2, ',', '.'), 1, 1, 'R', $fill);
-
-                if (!empty($item->desconto)) {
-                    $this->pdf->SetFont('helvetica', 'I', 10);
-                    $this->pdf->Cell(140, 6, 'Desconto:', 0, 0, 'R');
-                    $this->pdf->Cell(35, 6, '- R$ ' . number_format($item->desconto, 2, ',', '.'), 0, 1, 'R');
-                    $this->pdf->SetFont('helvetica', '', 12);
-                }
-                $linha++;
-            }
-
-            // Total geral com destaque
-            $this->pdf->SetFillColor(41, 128, 185);
-            $this->pdf->SetTextColor(255, 255, 255);
-            $this->pdf->SetFont('helvetica', 'B', 12);
-            $this->pdf->Cell(140, 10, 'TOTAL GERAL:', 1, 0, 'R', true);
-            $this->pdf->Cell(35, 10, 'R$ ' . number_format($total_geral, 2, ',', '.'), 1, 1, 'R', true);
-            $this->pdf->SetTextColor(0, 0, 0);
-        }
-
-        // Cláusulas e condições com estilo moderno
-        $this->pdf->Ln(10);
-        $this->pdf->SetFillColor(41, 128, 185);
-        $this->pdf->SetTextColor(255, 255, 255);
-        $this->pdf->SetFont('helvetica', 'B', 14);
-        $this->pdf->Cell(0, 10, 'CONDIÇÕES GERAIS', 0, 1, 'L', true);
-        $this->pdf->SetTextColor(0, 0, 0);
-        $this->pdf->SetFont('helvetica', '', 12);
-
-        if (!empty($clausulas)) {
-            $this->pdf->Ln(5);
-            if (isset($clausulas['validade'])) {
-                $this->pdf->MultiCell(0, 7, '• Validade da proposta: ' . $clausulas['validade'], 0, 'L');
-            }
-            if (isset($clausulas['pagamento'])) {
-                $this->pdf->MultiCell(0, 7, '• Forma de pagamento: ' . $clausulas['pagamento'], 0, 'L');
-            }
-            if (isset($clausulas['prazo_execucao'])) {
-                $this->pdf->MultiCell(0, 7, '• Prazo de execução: ' . $clausulas['prazo_execucao'], 0, 'L');
-            }
-            if (isset($clausulas['observacoes'])) {
-                $this->pdf->Ln(5);
-                $this->pdf->MultiCell(0, 7, $clausulas['observacoes'], 0, 'L');
-            }
-        }
-
-        // Local e data
-        $this->pdf->Ln(20);
-        $this->pdf->SetFont('helvetica', '', 12);
-        $this->pdf->Cell(0, 7, get_option('blogname') . ', ' . date('d/m/Y'), 0, 1, 'C');
-
-        // Assinaturas com linhas estilizadas
-        $this->pdf->Ln(20);
-        $this->pdf->SetDrawColor(41, 128, 185);
-        $this->pdf->SetLineWidth(0.5);
-        $this->pdf->Cell(85, 0, '', 'T', 0, 'C');
-        $this->pdf->Cell(20, 0, '', 0, 0, 'C');
-        $this->pdf->Cell(85, 0, '', 'T', 1, 'C');
-        
-        $this->pdf->Ln(5);
-        $this->pdf->Cell(85, 5, 'Responsável', 0, 0, 'C');
-        $this->pdf->Cell(20, 5, '', 0, 0, 'C');
-        $this->pdf->Cell(85, 5, 'Cliente', 0, 1, 'C');
-
-        // Enviar PDF para o navegador
-        $this->pdf->Output('proposta_' . $proposta_id . '.pdf', 'I');
-        exit;
+    private function renderizar_html_proposta($proposta, $itens, $clausulas) {
+        ob_start();
+        ?>
+        <html>
+        <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <style>
+                body { font-family: Helvetica, sans-serif; background-color: #f8f9fa; }
+                .header { background-color: #343a40; color: white; text-align: center; padding: 5px; }
+                .container { margin-top: 20px; }
+                .table { width: 100%; margin-top: 20px; border: 1px solid #ddd; }
+                .table th { background-color: #007bff; color: white; }
+                .footer { margin-top: 30px; text-align: center; font-size: 12px; color: #555; }
+                h2 { margin-top: 20px; }
+                h3 { margin-top: 15px; }
+                .section { margin-bottom: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: white; }
+                .badge-custom { background-color: #007bff; color: white; }
+            </style>
+        </head>
+        <body>
+            <header class="header">
+                <h1>Proposta de desenvolvimento</h1>
+                <p>
+                    <span class="badge badge-light text-primary px-3 py-2">
+                        Proposta nº <?php echo str_pad($proposta->id, 5, '0', STR_PAD_LEFT); ?>
+                    </span>
+                    <span>
+                        <i class="fas fa-calendar-alt"></i> Data: <?php echo date('d/m/Y'); ?>
+                    </span>
+                </p>
+            </header>
+            <div class="container">
+                <div class="section">
+                    <h2><?php echo $proposta->titulo; ?></h2>
+                    <p><?php echo nl2br($proposta->descricao); ?></p>
+                </div>
+                <div class="section">
+                    <h3>DADOS DO CLIENTE</h3>
+                    <p>Nome: <?php echo $proposta->cliente_nome; ?></p>
+                    <?php if ($proposta->cliente_email): ?>
+                    <p>Email: <?php echo $proposta->cliente_email; ?></p>
+                    <?php endif; ?>
+                    <?php if ($proposta->cliente_telefone): ?>
+                    <p>Telefone: <?php echo $proposta->cliente_telefone; ?></p>
+                    <?php endif; ?>
+                    <?php if ($proposta->cliente_endereco): ?>
+                    <p>Endereço: <?php echo $proposta->cliente_endereco; ?></p>
+                    <?php endif; ?>
+                </div>
+                <div class="section">
+                    <h3>PRODUTOS E SERVIÇOS</h3>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Serviço</th>
+                                <th>Qtd</th>
+                                <th>Valor Unit.</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($itens as $item): ?>
+                            <tr>
+                                <td><?php echo $item->servico_nome; ?></td>
+                                <td><?php echo $item->quantidade; ?></td>
+                                <td>R$ <?php echo number_format($item->valor_unitario, 2, ',', '.'); ?></td>
+                                <td>R$ <?php echo number_format($item->quantidade * $item->valor_unitario, 2, ',', '.'); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="section">
+                    <h3>CONDIÇÕES GERAIS</h3>
+                    <?php if (!empty($clausulas)): ?>
+                    <ul>
+                    <?php foreach ($clausulas as $clausula => $valor): ?>
+                        <li><?php echo ucfirst($clausula) . ': ' . $valor; ?></li>
+                    <?php endforeach; ?>
+                    </ul>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Obrigado por escolher nossos serviços!</p>
+            </div>
+        </body>
+        </html>
+        <?php
+        return ob_get_clean();
     }
 }
 

@@ -48,12 +48,12 @@ function msc_activate_plugin() {
         cliente_id mediumint(9) NOT NULL,
         titulo varchar(200) NOT NULL,
         descricao text,
+        valor_total decimal(10,2) DEFAULT 0.00,
         status varchar(20) DEFAULT 'pendente',
         data_criacao datetime DEFAULT CURRENT_TIMESTAMP,
         data_modificacao datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         PRIMARY KEY  (id),
-        KEY cliente_id (cliente_id),
-        FOREIGN KEY (cliente_id) REFERENCES {$wpdb->prefix}msc_clientes(id) ON DELETE CASCADE
+        KEY cliente_id (cliente_id)
     ) $charset_collate;";
 
     // Tabela de itens da proposta
@@ -61,14 +61,12 @@ function msc_activate_plugin() {
         id mediumint(9) NOT NULL AUTO_INCREMENT,
         proposta_id mediumint(9) NOT NULL,
         servico_id mediumint(9) NOT NULL,
-        quantidade int NOT NULL DEFAULT 1,
+        quantidade int(11) NOT NULL DEFAULT 1,
         valor_unitario decimal(10,2) NOT NULL,
         desconto decimal(10,2) DEFAULT 0.00,
         PRIMARY KEY  (id),
         KEY proposta_id (proposta_id),
-        KEY servico_id (servico_id),
-        FOREIGN KEY (proposta_id) REFERENCES {$wpdb->prefix}msc_propostas(id) ON DELETE CASCADE,
-        FOREIGN KEY (servico_id) REFERENCES {$wpdb->prefix}msc_servicos(id) ON DELETE CASCADE
+        KEY servico_id (servico_id)
     ) $charset_collate;";
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
