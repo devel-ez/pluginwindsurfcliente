@@ -384,3 +384,36 @@ Stack trace:
     [cliente_telefone] => 21980649966
 )
 
+[29-Jan-2025 01:52:21 UTC] Dados recebidos do formulário:
+[29-Jan-2025 01:52:21 UTC] Nome: Dino
+[29-Jan-2025 01:52:21 UTC] Telefone: 219494949494
+[29-Jan-2025 01:52:21 UTC] Dados para inserção:
+[29-Jan-2025 01:52:21 UTC] Array
+(
+    [nome] => Dino
+    [telefone] => 219494949494
+    [login_wp] => loginwpvida@dd.com.br
+    [senha_wp] => 12345454
+    [login_hospedagem] => agenciassdfas@gaosndg.com
+    [senha_hospedagem] => 413515614
+    [observacoes] => 
+    [data_cadastro] => 2025-01-29 01:52:21
+)
+
+[29-Jan-2025 01:52:21 UTC] Cliente inserido com sucesso. ID: 7
+[29-Jan-2025 01:52:21 UTC] Dados do cliente inserido:
+[29-Jan-2025 01:52:21 UTC] stdClass Object
+(
+    [id] => 7
+    [nome] => Dino
+    [email] => 
+    [telefone] => 219494949494
+    [endereco] => 
+    [data_cadastro] => 2025-01-29 01:52:21
+    [login_wp] => loginwpvida@dd.com.br
+    [senha_wp] => 12345454
+    [login_hospedagem] => agenciassdfas@gaosndg.com
+    [senha_hospedagem] => 413515614
+    [observacoes] => 
+)
+
