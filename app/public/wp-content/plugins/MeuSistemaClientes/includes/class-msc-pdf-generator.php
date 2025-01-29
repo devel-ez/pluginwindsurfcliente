@@ -43,12 +43,15 @@ class MSC_PDF_Generator
 
         // Buscar dados da proposta
         $proposta = $wpdb->get_row($wpdb->prepare(
-            "SELECT p.*, c.nome as cliente_nome, c.email as cliente_email, c.telefone as cliente_telefone, c.endereco as cliente_endereco
+            "SELECT p.*, c.nome as cliente_nome, c.telefone as cliente_telefone 
              FROM {$wpdb->prefix}msc_propostas p
              LEFT JOIN {$wpdb->prefix}msc_clientes c ON p.cliente_id = c.id
              WHERE p.id = %d",
             $proposta_id
         ));
+
+        // Debug - Verificar os dados da proposta
+        error_log('Dados da proposta: ' . print_r($proposta, true));
 
         if (!$proposta) {
             wp_die('Proposta não encontrada');
@@ -99,8 +102,11 @@ class MSC_PDF_Generator
         // Renderizar o PDF
         $dompdf->render();
 
+        // Formatar o número da proposta com zeros à esquerda
+        $numero_proposta = str_pad($proposta->id, 5, '0', STR_PAD_LEFT);
+
         // Enviar o PDF para o navegador
-        $dompdf->stream('proposta_' . $proposta_id . '.pdf', array('Attachment' => 0));
+        $dompdf->stream('Proposta_' . $numero_proposta . '.pdf', array('Attachment' => 0));
     }
 
     private function renderizar_html_proposta($proposta, $itens, $clausulas, $caminho_capa, $assinatura_base64)
@@ -203,7 +209,7 @@ class MSC_PDF_Generator
                     border: 1px solid #ddd;
                     border-radius: 5px;
                     background-color: white;
-                    page-break-inside: avoid;
+                    /*page-break-inside: avoid;*/
                 }
 
                 .table {
@@ -275,10 +281,18 @@ class MSC_PDF_Generator
             </div>
 
             <!-- Página 2 - Conteúdo da proposta -->
-            <div class="pagina">
+            <div class="">
 
                 <div class="section">
                     <h2 class="titulo-proposta" style="margin-top: 60px;"><?php echo $proposta->titulo; ?></h2>
+                    
+                    <!-- Dados do Cliente -->
+                    <div class="cliente-info" style="margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3 style="margin-top: 0; color: #2C3E50;">Dados do Cliente</h3>
+                        <p><strong>Nome:</strong> <?php echo esc_html($proposta->cliente_nome); ?></p>
+                        <p><strong>Telefone:</strong> <?php echo esc_html($proposta->cliente_telefone); ?></p>
+                    </div>
+                    
                     <p class="descricao-proposta"><?php echo nl2br($proposta->descricao); ?></p>
                 </div>
                 <div class="section">
@@ -315,7 +329,7 @@ class MSC_PDF_Generator
                         </tfoot>
                     </table>
 
-                    <div class="section">
+                    <div class="section" style="margin-top: 20px;">
                         <h3>Cláusulas da Proposta</h3>
                         <p><strong>Validade da Proposta:</strong> <?php echo $clausulas['validade']; ?></p>
                         <p><strong>Forma de Pagamento:</strong> <?php echo nl2br($clausulas['pagamento']); ?></p>
@@ -324,7 +338,7 @@ class MSC_PDF_Generator
                     </div>
 
                     <!-- Adicionar Assinatura e Data -->
-                    <div class="section" style="margin-top: 50px; text-align: center;">
+                    <div class="section" style="margin-top: 50px; text-align: center; ">
                         <p><strong>Assinatura do Responsável:</strong></p>
                         <?php if (!empty($assinatura_base64)): ?>
                             <img src="<?php echo $assinatura_base64; ?>" alt="Assinatura do Responsável" style="max-width: 150px; max-height: 50px; margin: 10px auto; display: block;">

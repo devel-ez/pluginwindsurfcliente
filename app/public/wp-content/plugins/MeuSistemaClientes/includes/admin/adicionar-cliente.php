@@ -13,30 +13,33 @@ function msc_render_adicionar_cliente() {
     if (isset($_POST['msc_adicionar_cliente'])) {
         // Validação e sanitização
         $nome = sanitize_text_field($_POST['nome']);
-        $email = sanitize_email($_POST['email']);
         $telefone = sanitize_text_field($_POST['telefone']);
-        $endereco = sanitize_textarea_field($_POST['endereco']);
+        $login_wp = sanitize_text_field($_POST['login_wp']);
+        $senha_wp = sanitize_text_field($_POST['senha_wp']);
+        $login_hospedagem = sanitize_text_field($_POST['login_hospedagem']);
+        $senha_hospedagem = sanitize_text_field($_POST['senha_hospedagem']);
+        $observacoes = sanitize_textarea_field($_POST['observacoes']);
         
         // Debug - mostrar dados recebidos
         error_log('Dados recebidos do formulário:');
         error_log("Nome: $nome");
-        error_log("Email: $email");
         error_log("Telefone: $telefone");
-        error_log("Endereço: $endereco");
         
         // Validações básicas
         $erros = [];
         if (empty($nome)) $erros[] = "Nome é obrigatório.";
-        if (empty($email)) $erros[] = "E-mail é obrigatório.";
         if (empty($telefone)) $erros[] = "Telefone é obrigatório.";
         
         if (empty($erros)) {
             // Preparar dados para inserção
             $dados = array(
                 'nome' => $nome,
-                'email' => $email,
                 'telefone' => $telefone,
-                'endereco' => $endereco,
+                'login_wp' => $login_wp,
+                'senha_wp' => $senha_wp,
+                'login_hospedagem' => $login_hospedagem,
+                'senha_hospedagem' => $senha_hospedagem,
+                'observacoes' => $observacoes,
                 'data_cadastro' => current_time('mysql')
             );
             
@@ -48,7 +51,7 @@ function msc_render_adicionar_cliente() {
             $resultado = $wpdb->insert(
                 $table_name,
                 $dados,
-                array('%s', '%s', '%s', '%s', '%s')
+                array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
             );
             
             if ($resultado === false) {
@@ -118,13 +121,6 @@ function msc_render_adicionar_cliente() {
                         </div>
 
                         <div class="msc-form-row">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required 
-                                   value="<?php echo isset($_POST['email']) ? esc_attr($_POST['email']) : ''; ?>" 
-                                   class="regular-text">
-                        </div>
-
-                        <div class="msc-form-row">
                             <label for="telefone">Telefone *</label>
                             <input type="tel" id="telefone" name="telefone" required 
                                    value="<?php echo isset($_POST['telefone']) ? esc_attr($_POST['telefone']) : ''; ?>" 
@@ -132,9 +128,37 @@ function msc_render_adicionar_cliente() {
                         </div>
 
                         <div class="msc-form-row">
-                            <label for="endereco">Endereço</label>
-                            <textarea id="endereco" name="endereco" rows="4" 
-                                      class="large-text"><?php echo isset($_POST['endereco']) ? esc_textarea($_POST['endereco']) : ''; ?></textarea>
+                            <label for="login_wp">Login WordPress</label>
+                            <input type="text" id="login_wp" name="login_wp" 
+                                   value="<?php echo isset($_POST['login_wp']) ? esc_attr($_POST['login_wp']) : ''; ?>" 
+                                   class="regular-text">
+                        </div>
+
+                        <div class="msc-form-row">
+                            <label for="senha_wp">Senha WordPress</label>
+                            <input type="text" id="senha_wp" name="senha_wp" 
+                                   value="<?php echo isset($_POST['senha_wp']) ? esc_attr($_POST['senha_wp']) : ''; ?>" 
+                                   class="regular-text">
+                        </div>
+
+                        <div class="msc-form-row">
+                            <label for="login_hospedagem">Login Hospedagem</label>
+                            <input type="text" id="login_hospedagem" name="login_hospedagem" 
+                                   value="<?php echo isset($_POST['login_hospedagem']) ? esc_attr($_POST['login_hospedagem']) : ''; ?>" 
+                                   class="regular-text">
+                        </div>
+
+                        <div class="msc-form-row">
+                            <label for="senha_hospedagem">Senha Hospedagem</label>
+                            <input type="text" id="senha_hospedagem" name="senha_hospedagem" 
+                                   value="<?php echo isset($_POST['senha_hospedagem']) ? esc_attr($_POST['senha_hospedagem']) : ''; ?>" 
+                                   class="regular-text">
+                        </div>
+
+                        <div class="msc-form-row">
+                            <label for="observacoes">Observações</label>
+                            <textarea id="observacoes" name="observacoes" rows="4" 
+                                      class="large-text"><?php echo isset($_POST['observacoes']) ? esc_textarea($_POST['observacoes']) : ''; ?></textarea>
                         </div>
 
                         <div class="msc-form-row">

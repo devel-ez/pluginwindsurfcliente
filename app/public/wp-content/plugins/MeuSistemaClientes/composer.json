@@ -3,7 +3,8 @@
     "description": "Sistema de gerenciamento de clientes para WordPress",
     "type": "wordpress-plugin",
     "require": {
-        "tecnickcom/tcpdf": "^6.6"
+        "tecnickcom/tcpdf": "^6.6",
+        "dompdf/dompdf": "^3.1"
     },
     "autoload": {
         "psr-4": {

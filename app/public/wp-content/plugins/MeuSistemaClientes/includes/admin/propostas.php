@@ -10,21 +10,32 @@ function msc_render_propostas() {
     if (isset($_POST['excluir_proposta']) && isset($_POST['proposta_id']) && check_admin_referer('excluir_proposta')) {
         $proposta_id = intval($_POST['proposta_id']);
         
+        // Debug
+        error_log('Tentando excluir proposta ID: ' . $proposta_id);
+        
         // Excluir itens da proposta primeiro
-        $wpdb->delete(
+        $resultado_itens = $wpdb->delete(
             $wpdb->prefix . 'msc_proposta_itens',
             ['proposta_id' => $proposta_id],
             ['%d']
         );
         
+        error_log('Resultado exclusão itens: ' . ($resultado_itens !== false ? 'Sucesso' : 'Falha - ' . $wpdb->last_error));
+        
         // Depois excluir a proposta
-        $wpdb->delete(
+        $resultado_proposta = $wpdb->delete(
             $wpdb->prefix . 'msc_propostas',
             ['id' => $proposta_id],
             ['%d']
         );
         
-        echo '<div class="notice notice-success is-dismissible"><p>Proposta excluída com sucesso!</p></div>';
+        error_log('Resultado exclusão proposta: ' . ($resultado_proposta !== false ? 'Sucesso' : 'Falha - ' . $wpdb->last_error));
+        
+        if ($resultado_proposta !== false) {
+            echo '<div class="notice notice-success is-dismissible"><p>Proposta excluída com sucesso!</p></div>';
+        } else {
+            echo '<div class="notice notice-error is-dismissible"><p>Erro ao excluir proposta: ' . $wpdb->last_error . '</p></div>';
+        }
     }
 
     // Buscar propostas com informações do cliente
@@ -99,7 +110,7 @@ function msc_render_propostas() {
                                             <span class="dashicons dashicons-pdf"></span>
                                             Gerar PDF
                                         </a>
-                                        <button type="button" class="button button-link-delete excluir-proposta" data-id="<?php echo $p->id; ?>">
+                                        <button type="button" class="button button-link-delete excluir-proposta" data-id="<?php echo esc_attr($p->id); ?>">
                                             <span class="dashicons dashicons-trash"></span>
                                             Excluir
                                         </button>
@@ -131,6 +142,12 @@ function msc_render_propostas() {
             </div>
         <?php endif; ?>
     </div>
+
+    <form id="form-excluir-proposta" method="post" style="display: none;">
+        <input type="hidden" name="excluir_proposta" value="1">
+        <input type="hidden" name="proposta_id" id="proposta_id_excluir">
+        <?php wp_nonce_field('excluir_proposta'); ?>
+    </form>
 
     <style>
     .msc-cards-grid {
@@ -309,26 +326,55 @@ function msc_render_propostas() {
     </style>
 
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Manipula a exclusão de proposta
+        document.querySelectorAll('.excluir-proposta').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const propostaId = this.getAttribute('data-id');
+                console.log('Excluindo proposta ID:', propostaId);
+                
+                if (confirm('Tem certeza que deseja excluir esta proposta? Esta ação não pode ser desfeita.')) {
+                    const form = document.getElementById('form-excluir-proposta');
+                    const input = document.getElementById('proposta_id_excluir');
+                    
+                    if (form && input) {
+                        input.value = propostaId;
+                        console.log('Submetendo formulário com ID:', input.value);
+                        form.submit();
+                    } else {
+                        console.error('Formulário ou input não encontrado');
+                    }
+                }
+            });
+        });
+
+        // Fecha os menus quando clicar fora
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.proposta-actions')) {
+                document.querySelectorAll('.proposta-menu').forEach(menu => {
+                    menu.classList.remove('active');
+                });
+            }
+        });
+    });
+
     function togglePropostaMenu(button) {
-        // Fechar todos os menus abertos
-        document.querySelectorAll('.proposta-menu.active').forEach(menu => {
-            if (menu !== button.nextElementSibling) {
-                menu.classList.remove('active');
+        const menu = button.nextElementSibling;
+        const allMenus = document.querySelectorAll('.proposta-menu');
+        
+        // Fecha todos os outros menus
+        allMenus.forEach(m => {
+            if (m !== menu) {
+                m.classList.remove('active');
             }
         });
         
-        // Alternar menu atual
-        button.nextElementSibling.classList.toggle('active');
+        // Alterna o menu atual
+        menu.classList.toggle('active');
     }
-
-    // Fechar menus quando clicar fora
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.proposta-actions')) {
-            document.querySelectorAll('.proposta-menu.active').forEach(menu => {
-                menu.classList.remove('active');
-            });
-        }
-    });
     </script>
     <?php
 }

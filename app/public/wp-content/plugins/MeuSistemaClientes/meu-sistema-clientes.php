@@ -18,6 +18,29 @@ if (!defined('ABSPATH')) {
 // Plugin activation hook
 register_activation_hook(__FILE__, 'msc_activate_plugin');
 
+function msc_update_database() {
+    global $wpdb;
+    $charset_collate = $wpdb->get_charset_collate();
+    $table_name = $wpdb->prefix . 'msc_clientes';
+
+    // Verificar se os campos existem
+    $row = $wpdb->get_row("SELECT * FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = '{$table_name}' AND COLUMN_NAME = 'login_wp'");
+    
+    if (!$row) {
+        // Adicionar novos campos
+        $wpdb->query("ALTER TABLE {$table_name} 
+            ADD COLUMN login_wp varchar(100) DEFAULT NULL,
+            ADD COLUMN senha_wp varchar(100) DEFAULT NULL,
+            ADD COLUMN login_hospedagem varchar(100) DEFAULT NULL,
+            ADD COLUMN senha_hospedagem varchar(100) DEFAULT NULL,
+            ADD COLUMN observacoes text DEFAULT NULL");
+            
+        if ($wpdb->last_error) {
+            error_log('Erro ao adicionar campos na tabela de clientes: ' . $wpdb->last_error);
+        }
+    }
+}
+
 function msc_activate_plugin() {
     global $wpdb;
     $charset_collate = $wpdb->get_charset_collate();
@@ -25,10 +48,8 @@ function msc_activate_plugin() {
     // Tabela de clientes
     $sql_clientes = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}msc_clientes (
         id mediumint(9) NOT NULL AUTO_INCREMENT,
-        nome varchar(100) NOT NULL,
-        email varchar(100),
-        telefone varchar(20),
-        endereco text,
+        nome varchar(255) NOT NULL,
+        telefone varchar(50) NOT NULL,
         data_cadastro datetime DEFAULT CURRENT_TIMESTAMP,
         PRIMARY KEY  (id)
     ) $charset_collate;";
@@ -48,12 +69,12 @@ function msc_activate_plugin() {
         cliente_id mediumint(9) NOT NULL,
         titulo varchar(200) NOT NULL,
         descricao text,
+        valor_total decimal(10,2) DEFAULT 0.00,
         status varchar(20) DEFAULT 'pendente',
         data_criacao datetime DEFAULT CURRENT_TIMESTAMP,
         data_modificacao datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         PRIMARY KEY  (id),
-        KEY cliente_id (cliente_id),
-        FOREIGN KEY (cliente_id) REFERENCES {$wpdb->prefix}msc_clientes(id) ON DELETE CASCADE
+        KEY cliente_id (cliente_id)
     ) $charset_collate;";
 
     // Tabela de itens da proposta
@@ -61,14 +82,12 @@ function msc_activate_plugin() {
         id mediumint(9) NOT NULL AUTO_INCREMENT,
         proposta_id mediumint(9) NOT NULL,
         servico_id mediumint(9) NOT NULL,
-        quantidade int NOT NULL DEFAULT 1,
+        quantidade int(11) NOT NULL DEFAULT 1,
         valor_unitario decimal(10,2) NOT NULL,
         desconto decimal(10,2) DEFAULT 0.00,
         PRIMARY KEY  (id),
         KEY proposta_id (proposta_id),
-        KEY servico_id (servico_id),
-        FOREIGN KEY (proposta_id) REFERENCES {$wpdb->prefix}msc_propostas(id) ON DELETE CASCADE,
-        FOREIGN KEY (servico_id) REFERENCES {$wpdb->prefix}msc_servicos(id) ON DELETE CASCADE
+        KEY servico_id (servico_id)
     ) $charset_collate;";
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -76,6 +95,9 @@ function msc_activate_plugin() {
     dbDelta($sql_servicos);
     dbDelta($sql_propostas);
     dbDelta($sql_proposta_itens);
+    
+    // Atualizar a estrutura da tabela para adicionar os novos campos
+    msc_update_database();
 }
 
 // Plugin deactivation hook
