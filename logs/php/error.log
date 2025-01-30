@@ -1,0 +1,419 @@
+[29-Jan-2025 00:20:03 UTC] PHP Warning:  require_once(D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes/../vendor/autoload.php): Failed to open stream: No such file or directory in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 7
+[29-Jan-2025 00:20:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes/../vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php:7
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(197): require_once()
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#5 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 7
+[29-Jan-2025 00:24:06 UTC] PHP Warning:  require_once(D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes/../vendor/autoload.php): Failed to open stream: No such file or directory in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 7
+[29-Jan-2025 00:24:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes/../vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php:7
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(197): require_once()
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#5 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 7
+[29-Jan-2025 00:30:41 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[29-Jan-2025 00:32:41 UTC] WordPress database error Table 'local.wp_msc_proposta_itens' doesn't exist for query SELECT pi.*, s.nome as servico_nome, s.descricao as servico_descricao, s.valor as valor_padrao
+             FROM wp_msc_proposta_itens pi
+             LEFT JOIN wp_msc_servicos s ON pi.servico_id = s.id
+             WHERE pi.proposta_id = 8 made by do_action('wp_ajax_msc_gerar_pdf'), WP_Hook->do_action, WP_Hook->apply_filters, msc_ajax_gerar_pdf, MSC_PDF_Generator->gerar_pdf_proposta
+[29-Jan-2025 00:35:03 UTC] URL da assinatura: 
+[29-Jan-2025 00:35:03 UTC] URL da assinatura está vazia
+[29-Jan-2025 00:35:15 UTC] URL da assinatura: 
+[29-Jan-2025 00:35:15 UTC] URL da assinatura está vazia
+[29-Jan-2025 00:36:39 UTC] URL da assinatura: D:\LocalWP\pluginwindsurfcliente\app\public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:37:26 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:37:26 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:39:16 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:39:16 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:39:28 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:39:28 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:40:19 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:40:19 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:41:13 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:41:13 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:41:35 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:41:35 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:42:07 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:42:07 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:42:19 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:42:19 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:43:22 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:43:22 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:43:55 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:43:55 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:44:03 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:44:03 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:44:11 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:44:11 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:45:32 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:45:32 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:46:00 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:46:00 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:47:01 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:47:01 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:47:25 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:47:25 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:49:00 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:49:00 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:51:44 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:51:44 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:51:44 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Dompdf\Adapter\CPDF::text(), 4 passed in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 104 and at least 5 expected in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php:748
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(104): Dompdf\Adapter\CPDF->text(270, 15, 'P\xC3\xA1gina 1 de 1', Array)
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(955): MSC_PDF_Generator->{closure}(1, 1, Object(Dompdf\Adapter\CPDF), Object(Dompdf\FontMetrics))
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(912): Dompdf\Adapter\CPDF->processPageScript(Object(Closure))
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(101): Dompdf\Adapter\CPDF->page_script(Object(Closure))
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(199): MSC_PDF_Generator->gerar_pdf_proposta(8)
+#5 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#6 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#8 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#9 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php on line 748
+[29-Jan-2025 00:51:52 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:51:52 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:51:52 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Dompdf\Adapter\CPDF::text(), 4 passed in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 104 and at least 5 expected in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php:748
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(104): Dompdf\Adapter\CPDF->text(270, 15, 'P\xC3\xA1gina 1 de 1', Array)
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(955): MSC_PDF_Generator->{closure}(1, 1, Object(Dompdf\Adapter\CPDF), Object(Dompdf\FontMetrics))
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(912): Dompdf\Adapter\CPDF->processPageScript(Object(Closure))
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(101): Dompdf\Adapter\CPDF->page_script(Object(Closure))
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(199): MSC_PDF_Generator->gerar_pdf_proposta(8)
+#5 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#6 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#8 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#9 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php on line 748
+[29-Jan-2025 00:52:10 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:52:10 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:52:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Dompdf\Adapter\CPDF::text(), 4 passed in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 104 and at least 5 expected in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php:748
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(104): Dompdf\Adapter\CPDF->text(270, 15, 'P\xC3\xA1gina 1 de 1', Array)
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(955): MSC_PDF_Generator->{closure}(1, 1, Object(Dompdf\Adapter\CPDF), Object(Dompdf\FontMetrics))
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(912): Dompdf\Adapter\CPDF->processPageScript(Object(Closure))
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(101): Dompdf\Adapter\CPDF->page_script(Object(Closure))
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(199): MSC_PDF_Generator->gerar_pdf_proposta(8)
+#5 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#6 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#8 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#9 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php on line 748
+[29-Jan-2025 00:52:20 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:52:20 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:52:20 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Dompdf\Adapter\CPDF::text(), 4 passed in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 104 and at least 5 expected in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php:748
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(104): Dompdf\Adapter\CPDF->text(270, 15, 'P\xC3\xA1gina 1 de 1', Array)
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(955): MSC_PDF_Generator->{closure}(1, 1, Object(Dompdf\Adapter\CPDF), Object(Dompdf\FontMetrics))
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(912): Dompdf\Adapter\CPDF->processPageScript(Object(Closure))
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(101): Dompdf\Adapter\CPDF->page_script(Object(Closure))
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(199): MSC_PDF_Generator->gerar_pdf_proposta(8)
+#5 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#6 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#8 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#9 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php on line 748
+[29-Jan-2025 00:53:55 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:53:55 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:55:14 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:55:14 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:55:29 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:55:29 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:55:29 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Dompdf\Adapter\CPDF::text(), 4 passed in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php on line 104 and at least 5 expected in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php:748
+Stack trace:
+#0 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(104): Dompdf\Adapter\CPDF->text(270, 15, 'P\xC3\xA1gina 1 de 1', Array)
+#1 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(955): MSC_PDF_Generator->{closure}(1, 1, Object(Dompdf\Adapter\CPDF), Object(Dompdf\FontMetrics))
+#2 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php(912): Dompdf\Adapter\CPDF->processPageScript(Object(Closure))
+#3 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\includes\class-msc-pdf-generator.php(101): Dompdf\Adapter\CPDF->page_script(Object(Closure))
+#4 D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\meu-sistema-clientes.php(199): MSC_PDF_Generator->gerar_pdf_proposta(8)
+#5 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(324): msc_ajax_gerar_pdf('')
+#6 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 D:\LocalWP\pluginwindsurfcliente\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#8 D:\LocalWP\pluginwindsurfcliente\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_msc_ger...')
+#9 {main}
+  thrown in D:\LocalWP\pluginwindsurfcliente\app\public\wp-content\plugins\MeuSistemaClientes\vendor\dompdf\dompdf\src\Adapter\CPDF.php on line 748
+[29-Jan-2025 00:55:42 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:55:42 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:56:58 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:56:58 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:58:37 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:58:37 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:58:41 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:58:41 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:58:48 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:58:48 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 00:59:39 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 00:59:39 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:00:19 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:00:19 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:01:01 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:01:01 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:07:49 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:07:49 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:07:58 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:07:58 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:08:13 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:08:13 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:10:36 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:10:36 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:10:50 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:10:50 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:13:40 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:13:40 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:14:30 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:14:30 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:14:49 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:14:49 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:20:51 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:20:51 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:26:53 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:26:53 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:29:14 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:29:14 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:31:21 UTC] Tentando excluir proposta ID: 8
+[29-Jan-2025 01:31:21 UTC] Resultado exclusão itens: Sucesso
+[29-Jan-2025 01:31:21 UTC] Resultado exclusão proposta: Sucesso
+[29-Jan-2025 01:32:32 UTC] Dados recebidos do formulário:
+[29-Jan-2025 01:32:32 UTC] Nome: Felipe Velez
+[29-Jan-2025 01:32:32 UTC] Telefone: 21980649966
+[29-Jan-2025 01:32:32 UTC] Dados para inserção:
+[29-Jan-2025 01:32:32 UTC] Array
+(
+    [nome] => Felipe Velez
+    [telefone] => 21980649966
+    [login_wp] => 
+    [senha_wp] => 
+    [login_hospedagem] => 
+    [senha_hospedagem] => 
+    [observacoes] => 
+    [data_cadastro] => 2025-01-29 01:32:32
+)
+
+[29-Jan-2025 01:32:32 UTC] WordPress database error Unknown column 'login_wp' in 'field list' for query INSERT INTO `wp_msc_clientes` (`nome`, `telefone`, `login_wp`, `senha_wp`, `login_hospedagem`, `senha_hospedagem`, `observacoes`, `data_cadastro`) VALUES ('Felipe Velez', '21980649966', '', '', '', '', '', '2025-01-29 01:32:32') made by do_action('clientes_page_meu-sistema-clientes-adicionar'), WP_Hook->do_action, WP_Hook->apply_filters, msc_render_adicionar_cliente
+[29-Jan-2025 01:32:32 UTC] Erro ao inserir cliente: Unknown column 'login_wp' in 'field list'
+[29-Jan-2025 01:33:21 UTC] Dados recebidos do formulário:
+[29-Jan-2025 01:33:21 UTC] Nome: Felipe Velez
+[29-Jan-2025 01:33:21 UTC] Telefone: 21980649966
+[29-Jan-2025 01:33:21 UTC] Dados para inserção:
+[29-Jan-2025 01:33:21 UTC] Array
+(
+    [nome] => Felipe Velez
+    [telefone] => 21980649966
+    [login_wp] => 
+    [senha_wp] => 
+    [login_hospedagem] => 
+    [senha_hospedagem] => 
+    [observacoes] => 
+    [data_cadastro] => 2025-01-29 01:33:21
+)
+
+[29-Jan-2025 01:33:21 UTC] Cliente inserido com sucesso. ID: 6
+[29-Jan-2025 01:33:21 UTC] Dados do cliente inserido:
+[29-Jan-2025 01:33:21 UTC] stdClass Object
+(
+    [id] => 6
+    [nome] => Felipe Velez
+    [email] => 
+    [telefone] => 21980649966
+    [endereco] => 
+    [data_cadastro] => 2025-01-29 01:33:21
+    [login_wp] => 
+    [senha_wp] => 
+    [login_hospedagem] => 
+    [senha_hospedagem] => 
+    [observacoes] => 
+)
+
+[29-Jan-2025 01:35:23 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:35:23 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:36:02 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:36:02 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:37:36 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:37:36 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:37:36 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:38:56 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:38:56 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:38:56 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:39:53 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:39:53 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:39:53 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:41:57 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:41:57 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:41:57 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:43:10 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:43:10 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:43:10 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:44:33 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:44:33 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:44:33 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:45:06 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:45:06 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:45:06 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:46:48 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:46:48 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:46:48 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:48:28 UTC] Assinatura convertida para base64 com sucesso
+[29-Jan-2025 01:48:28 UTC] URL da assinatura: D:/LocalWP/pluginwindsurfcliente/app/public/wp-content/uploads/2025/01/assinatura.png
+[29-Jan-2025 01:48:28 UTC] Dados da proposta: stdClass Object
+(
+    [id] => 9
+    [cliente_id] => 6
+    [titulo] => Landing Page
+    [descricao] => Uma landing page, ou página de destino, é uma página web projetada especificamente para converter visitantes em leads ou clientes. Diferentemente de outras páginas de um site, como a homepage, uma landing page tem um foco único e direto, geralmente relacionado a uma oferta, produto ou serviço. Seu objetivo principal é captar informações dos usuários por meio de formulários, como nome, e-mail ou número de telefone, em troca de algo de valor, como um e-book, desconto ou acesso a conteúdos exclusivos. Para isso, a landing page costuma ter um design limpo, um call-to-action (CTA) claro e informações sucintas que reforçam os benefícios da oferta, eliminando distrações que possam desviar a atenção do visitante.
+    [valor_total] => 0.00
+    [status] => pendente
+    [data_criacao] => 2025-01-29 01:35:16
+    [data_modificacao] => 2025-01-29 01:35:16
+    [cliente_nome] => Felipe Velez
+    [cliente_telefone] => 21980649966
+)
+
+[29-Jan-2025 01:52:21 UTC] Dados recebidos do formulário:
+[29-Jan-2025 01:52:21 UTC] Nome: Dino
+[29-Jan-2025 01:52:21 UTC] Telefone: 219494949494
+[29-Jan-2025 01:52:21 UTC] Dados para inserção:
+[29-Jan-2025 01:52:21 UTC] Array
+(
+    [nome] => Dino
+    [telefone] => 219494949494
+    [login_wp] => loginwpvida@dd.com.br
+    [senha_wp] => 12345454
+    [login_hospedagem] => agenciassdfas@gaosndg.com
+    [senha_hospedagem] => 413515614
+    [observacoes] => 
+    [data_cadastro] => 2025-01-29 01:52:21
+)
+
+[29-Jan-2025 01:52:21 UTC] Cliente inserido com sucesso. ID: 7
+[29-Jan-2025 01:52:21 UTC] Dados do cliente inserido:
+[29-Jan-2025 01:52:21 UTC] stdClass Object
+(
+    [id] => 7
+    [nome] => Dino
+    [email] => 
+    [telefone] => 219494949494
+    [endereco] => 
+    [data_cadastro] => 2025-01-29 01:52:21
+    [login_wp] => loginwpvida@dd.com.br
+    [senha_wp] => 12345454
+    [login_hospedagem] => agenciassdfas@gaosndg.com
+    [senha_hospedagem] => 413515614
+    [observacoes] => 
+)
+
