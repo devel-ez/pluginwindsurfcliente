@@ -1,10 +1,12 @@
 # WordPress
 wp-config.php
-wp-content/uploads/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/cache/
-wp-content/backups/
+app/public/wp-admin/
+app/public/wp-includes/
+app/public/wp-content/uploads/
+app/public/wp-content/upgrade/
+app/public/wp-content/plugins/*
+!app/public/wp-content/plugins/MeuSistemaClientes/
+app/public/wp-content/plugins/MeuSistemaClientes/vendor/
 
 # Local development
 logs/
@@ -19,3 +21,10 @@ conf/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Vendor and Node Modules
+vendor/
+node_modules/
+
+# Log files
+*.log
