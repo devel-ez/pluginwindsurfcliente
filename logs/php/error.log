@@ -1,0 +1,187 @@
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "login_wp" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "senha_wp" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "login_hospedagem" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "senha_hospedagem" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "observacoes" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "login_wp" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "senha_wp" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "login_hospedagem" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "senha_hospedagem" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 20:39:43 UTC] PHP Warning:  Undefined array key "observacoes" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/listar-clientes.php on line 95
+[31-Jan-2025 21:39:37 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:39:37 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:39:37 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:39:37 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:40:08 UTC] Dados recebidos do formulário:
+[31-Jan-2025 21:40:08 UTC] Nome: RAFAEL MOREIRA DE OLIVEIRA
+[31-Jan-2025 21:40:08 UTC] Telefone: (85) 996449352
+[31-Jan-2025 21:40:08 UTC] Dados para inserção:
+[31-Jan-2025 21:40:08 UTC] Array
+(
+    [nome] => RAFAEL MOREIRA DE OLIVEIRA
+    [telefone] => (85) 996449352
+    [login_wp] => loginwpvida@dd.com.br
+    [senha_wp] => 12345454
+    [login_hospedagem] => agenciassdfas@gaosndg.com
+    [senha_hospedagem] => asdfbvb
+    [observacoes] => obsssssssssssssssss
+    [data_cadastro] => 2025-01-31 21:40:08
+)
+
+[31-Jan-2025 21:40:08 UTC] Cliente inserido com sucesso. ID: 6
+[31-Jan-2025 21:40:08 UTC] Dados do cliente inserido:
+[31-Jan-2025 21:40:08 UTC] stdClass Object
+(
+    [id] => 6
+    [nome] => RAFAEL MOREIRA DE OLIVEIRA
+    [email] => 
+    [telefone] => (85) 996449352
+    [endereco] => 
+    [data_cadastro] => 2025-01-31 21:40:08
+    [login_wp] => loginwpvida@dd.com.br
+    [senha_wp] => 12345454
+    [login_hospedagem] => agenciassdfas@gaosndg.com
+    [senha_hospedagem] => asdfbvb
+    [observacoes] => obsssssssssssssssss
+)
+
+[31-Jan-2025 21:41:22 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:41:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:41:22 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:41:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:41:22 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 21:41:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 22:04:30 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 22:04:30 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:00:31 UTC] Tentando excluir proposta ID: 11
+[31-Jan-2025 23:00:31 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:00:31 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:00:34 UTC] Tentando excluir proposta ID: 10
+[31-Jan-2025 23:00:34 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:00:34 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:00:36 UTC] Tentando excluir proposta ID: 9
+[31-Jan-2025 23:00:36 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:00:36 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:00:38 UTC] Tentando excluir proposta ID: 8
+[31-Jan-2025 23:00:38 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:00:38 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:01:03 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:01:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:01:03 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:01:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:01:32 UTC] Tentando excluir proposta ID: 12
+[31-Jan-2025 23:01:32 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:01:32 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:01:46 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:01:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:42:31 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:42:31 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:42:31 UTC] Tentando excluir proposta ID: 13
+[31-Jan-2025 23:42:31 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:42:31 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:43:01 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:43:01 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:43:01 UTC] PHP Deprecated:  strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-admin/admin-header.php on line 36
+[31-Jan-2025 23:43:41 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:43:41 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:43:41 UTC] PHP Deprecated:  strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-admin/admin-header.php on line 36
+[31-Jan-2025 23:43:41 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:43:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:43:41 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:43:41 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:43:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:43:41 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:43:43 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:43:43 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:44:05 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:44:05 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:44:05 UTC] PHP Deprecated:  strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-admin/admin-header.php on line 36
+[31-Jan-2025 23:44:15 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:44:15 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:44:15 UTC] PHP Deprecated:  strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-admin/admin-header.php on line 36
+[31-Jan-2025 23:44:15 UTC] PHP Warning:  Undefined array key "desconto" in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:44:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:44:15 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-content/plugins/MeuSistemaClientes/includes/admin/adicionar-proposta.php on line 86
+[31-Jan-2025 23:44:16 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:44:16 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:48:16 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:48:16 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:48:23 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:48:23 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:48:24 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:48:24 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:48:24 UTC] PHP Deprecated:  strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-admin/admin-header.php on line 36
+[31-Jan-2025 23:48:31 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:48:31 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:48:31 UTC] PHP Deprecated:  strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-admin/admin-header.php on line 36
+[31-Jan-2025 23:48:32 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:48:32 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:48:42 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:48:42 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:48:42 UTC] PHP Deprecated:  strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-admin/admin-header.php on line 36
+[31-Jan-2025 23:48:52 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:48:52 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:48:52 UTC] PHP Deprecated:  strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-admin/admin-header.php on line 36
+[31-Jan-2025 23:48:53 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:48:53 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:49:49 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:49:49 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:49:49 UTC] Tentando excluir proposta ID: 17
+[31-Jan-2025 23:49:50 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:49:50 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:49:53 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:49:53 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:49:53 UTC] Tentando excluir proposta ID: 16
+[31-Jan-2025 23:49:53 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:49:53 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:49:55 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:49:55 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:49:55 UTC] Tentando excluir proposta ID: 15
+[31-Jan-2025 23:49:55 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:49:55 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:49:58 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:49:58 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:49:58 UTC] Tentando excluir proposta ID: 14
+[31-Jan-2025 23:49:58 UTC] Resultado exclusão itens: Sucesso
+[31-Jan-2025 23:49:58 UTC] Resultado exclusão proposta: Sucesso
+[31-Jan-2025 23:50:00 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:50:00 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:50:03 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:50:03 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:50:06 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:50:06 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:50:08 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 7329
+[31-Jan-2025 23:50:08 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/velez/Desktop/LocalWP/pluginwindsurfcliente/app/public/wp-includes/functions.php on line 2189
+[31-Jan-2025 23:50:49 UTC] Dados recebidos do formulário:
+[31-Jan-2025 23:50:49 UTC] Nome: JOÃO VICTOR DA SILVA SARAIVA
+[31-Jan-2025 23:50:49 UTC] Telefone: 2
+[31-Jan-2025 23:50:49 UTC] Dados para inserção:
+[31-Jan-2025 23:50:49 UTC] Array
+(
+    [nome] => JOÃO VICTOR DA SILVA SARAIVA
+    [telefone] => 2
+    [login_wp] => loginwpvida@dd.com.br
+    [senha_wp] => 12345454
+    [login_hospedagem] => agenciassdfas@gaosndg.com
+    [senha_hospedagem] => asdfbvb
+    [observacoes] => ff
+    [data_cadastro] => 2025-01-31 23:50:49
+)
+
+[31-Jan-2025 23:50:49 UTC] Cliente inserido com sucesso. ID: 7
+[31-Jan-2025 23:50:49 UTC] Dados do cliente inserido:
+[31-Jan-2025 23:50:49 UTC] stdClass Object
+(
+    [id] => 7
+    [nome] => JOÃO VICTOR DA SILVA SARAIVA
+    [email] => 
+    [telefone] => 2
+    [endereco] => 
+    [data_cadastro] => 2025-01-31 23:50:49
+    [login_wp] => loginwpvida@dd.com.br
+    [senha_wp] => 12345454
+    [login_hospedagem] => agenciassdfas@gaosndg.com
+    [senha_hospedagem] => asdfbvb
+    [observacoes] => ff
+)
+
