@@ -76,6 +76,7 @@ function msc_render_adicionar_proposta() {
             foreach ($_POST['servico_id'] as $key => $servico_id) {
                 if (empty($servico_id)) continue;
                 
+                // Configuração do desconto com validação
                 $wpdb->insert(
                     $wpdb->prefix . 'msc_proposta_itens',
                     array(
@@ -84,7 +85,7 @@ function msc_render_adicionar_proposta() {
                         'quantidade' => intval($_POST['quantidade'][$key]),
                         'valor_unitario' => floatval(str_replace(',', '.', $_POST['valor_unitario'][$key])),
                         'desconto' => isset($_POST['desconto'][$key]) ? floatval(str_replace(',', '.', $_POST['desconto'][$key])) : 0
-                    ),
+                    },
                     array('%d', '%d', '%d', '%f', '%f')
                 );
             }
