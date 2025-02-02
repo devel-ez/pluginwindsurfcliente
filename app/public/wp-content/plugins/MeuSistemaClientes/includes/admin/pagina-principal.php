@@ -49,165 +49,109 @@ function msc_render_pagina_principal() {
 
         <!-- Cards de Ações -->
         <div class="msc-cards-container">
-            <!-- Novo Cliente -->
             <div class="msc-card">
-                <div class="msc-card-header">
-                    <span class="dashicons dashicons-plus-alt"></span>
-                    <h2>Novo Cliente</h2>
-                </div>
+                <h3><span class="dashicons dashicons-admin-users"></span> Novo Cliente</h3>
                 <p>Adicione um novo cliente ao sistema com todos os detalhes necessários.</p>
-                <a href="<?php echo admin_url('admin.php?page=meu-sistema-clientes-adicionar'); ?>" class="msc-button">
-                    Adicionar Cliente
-                </a>
+                <a href="<?php echo admin_url('admin.php?page=msc-adicionar-cliente'); ?>" class="button button-primary">Adicionar Cliente</a>
             </div>
 
-            <!-- Lista de Clientes -->
             <div class="msc-card">
-                <div class="msc-card-header">
-                    <span class="dashicons dashicons-list-view"></span>
-                    <h2>Lista de Clientes</h2>
-                </div>
+                <h3><span class="dashicons dashicons-list-view"></span> Lista de Clientes</h3>
                 <p>Visualize, edite e gerencie todos os seus clientes cadastrados.</p>
-                <a href="<?php echo admin_url('admin.php?page=meu-sistema-clientes-listar'); ?>" class="msc-button">
-                    Ver Todos
-                </a>
+                <a href="<?php echo admin_url('admin.php?page=msc-listar-clientes'); ?>" class="button button-primary">Ver Todos</a>
             </div>
 
-            <!-- Serviços -->
             <div class="msc-card">
-                <div class="msc-card-header">
-                    <span class="dashicons dashicons-hammer"></span>
-                    <h2>Serviços</h2>
-                </div>
+                <h3><span class="dashicons dashicons-hammer"></span> Serviços</h3>
                 <p>Gerencie os serviços oferecidos e seus respectivos valores.</p>
-                <a href="<?php echo admin_url('admin.php?page=meu-sistema-clientes-servicos'); ?>" class="msc-button">
-                    Gerenciar Serviços
-                </a>
+                <a href="<?php echo admin_url('admin.php?page=msc-servicos'); ?>" class="button button-primary">Gerenciar Serviços</a>
             </div>
 
-            <!-- Propostas -->
             <div class="msc-card">
-                <h2><span class="dashicons dashicons-media-text"></span> Propostas</h2>
+                <h3><span class="dashicons dashicons-media-text"></span> Propostas</h3>
                 <p>Gerencie suas propostas comerciais. Crie, edite e gere PDFs das propostas.</p>
-                <a href="<?php echo admin_url('admin.php?page=meu-sistema-clientes-propostas'); ?>" class="button button-primary">
-                    Gerenciar Propostas
-                </a>
+                <a href="<?php echo admin_url('admin.php?page=msc-propostas'); ?>" class="button button-primary">Gerenciar Propostas</a>
             </div>
 
-            <!-- Relatórios -->
             <div class="msc-card">
-                <div class="msc-card-header">
-                    <span class="dashicons dashicons-chart-bar"></span>
-                    <h2>Relatórios</h2>
-                </div>
-                <p>Acesse relatórios e estatísticas sobre seus clientes.</p>
-                <a href="#" class="msc-button">Ver Relatórios</a>
+                <h3><span class="dashicons dashicons-columns"></span> Kanban</h3>
+                <p>Gerencie tarefas e projetos dos clientes usando quadros Kanban.</p>
+                <a href="<?php echo admin_url('admin.php?page=msc-kanban'); ?>" class="button button-primary">Gerenciar Kanban</a>
             </div>
 
-            <!-- Configurações -->
             <div class="msc-card">
-                <h2><span class="dashicons dashicons-admin-settings"></span> Configurações da Proposta</h2>
+                <h3><span class="dashicons dashicons-admin-generic"></span> Configurações da Proposta</h3>
                 <p>Configure as cláusulas padrão e outras configurações das propostas geradas em PDF.</p>
-                <a href="<?php echo admin_url('admin.php?page=meu-sistema-clientes-configuracoes'); ?>" class="button button-primary">
-                    Configurar Proposta
-                </a>
+                <a href="<?php echo admin_url('admin.php?page=msc-configuracoes'); ?>" class="button button-primary">Configurar Proposta</a>
             </div>
         </div>
+
+        <style>
+        .msc-stats-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .msc-stat-box {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            flex: 1;
+            text-align: center;
+        }
+
+        .msc-stat-number {
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            color: #2271b1;
+            margin-bottom: 10px;
+        }
+
+        .msc-stat-label {
+            color: #50575e;
+        }
+
+        .msc-cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .msc-card {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .msc-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2271b1;
+        }
+
+        .msc-card .dashicons {
+            font-size: 1.5em;
+            width: auto;
+            height: auto;
+        }
+
+        .msc-card p {
+            margin-bottom: 20px;
+            color: #50575e;
+        }
+
+        .msc-card .button {
+            width: 100%;
+            text-align: center;
+        }
+        </style>
     </div>
-
-    <style>
-    .msc-stats-container {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 30px;
-    }
-
-    .msc-stat-box {
-        background: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        flex: 1;
-        text-align: center;
-    }
-
-    .msc-stat-number {
-        display: block;
-        font-size: 24px;
-        font-weight: bold;
-        color: #2271b1;
-        margin-bottom: 5px;
-    }
-
-    .msc-stat-label {
-        color: #50575e;
-    }
-
-    .msc-cards-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .msc-card {
-        background: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .msc-card-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-    }
-
-    .msc-card-header .dashicons {
-        font-size: 24px;
-        width: 24px;
-        height: 24px;
-        margin-right: 10px;
-        color: #2271b1;
-    }
-
-    .msc-card-header h2 {
-        margin: 0;
-        font-size: 1.3em;
-        color: #1d2327;
-    }
-
-    .msc-card p {
-        margin: 0 0 20px 0;
-        color: #50575e;
-    }
-
-    .msc-button {
-        display: inline-block;
-        padding: 8px 12px;
-        background: #2271b1;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 3px;
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-
-    .msc-button:hover {
-        background: #135e96;
-        color: #fff;
-    }
-
-    .msc-button.secondary {
-        background: #f0f0f1;
-        color: #2271b1;
-    }
-
-    .msc-button.secondary:hover {
-        background: #dcdcde;
-        color: #135e96;
-    }
-    </style>
     <?php
 }

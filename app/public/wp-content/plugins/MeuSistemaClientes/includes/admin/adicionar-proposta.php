@@ -85,10 +85,11 @@ function msc_render_adicionar_proposta() {
                         'quantidade' => intval($_POST['quantidade'][$key]),
                         'valor_unitario' => floatval(str_replace(',', '.', $_POST['valor_unitario'][$key])),
                         'desconto' => isset($_POST['desconto'][$key]) ? floatval(str_replace(',', '.', $_POST['desconto'][$key])) : 0
-                    },
+                    ),
                     array('%d', '%d', '%d', '%f', '%f')
                 );
-            }
+
+                            }
         }
 
         // Em vez de redirecionar, definir uma flag de sucesso

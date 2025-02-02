@@ -18,14 +18,15 @@ if (!defined('ABSPATH')) {
 // Plugin activation hook
 register_activation_hook(__FILE__, 'msc_activate_plugin');
 
-function msc_update_database() {
+function msc_update_database()
+{
     global $wpdb;
     $charset_collate = $wpdb->get_charset_collate();
     $table_name = $wpdb->prefix . 'msc_clientes';
 
     // Verificar se os campos existem
     $row = $wpdb->get_row("SELECT * FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = '{$table_name}' AND COLUMN_NAME = 'login_wp'");
-    
+
     if (!$row) {
         // Adicionar novos campos
         $wpdb->query("ALTER TABLE {$table_name} 
@@ -34,14 +35,15 @@ function msc_update_database() {
             ADD COLUMN login_hospedagem varchar(100) DEFAULT NULL,
             ADD COLUMN senha_hospedagem varchar(100) DEFAULT NULL,
             ADD COLUMN observacoes text DEFAULT NULL");
-            
+
         if ($wpdb->last_error) {
             error_log('Erro ao adicionar campos na tabela de clientes: ' . $wpdb->last_error);
         }
     }
 }
 
-function msc_activate_plugin() {
+function msc_activate_plugin()
+{
     global $wpdb;
     $charset_collate = $wpdb->get_charset_collate();
 
@@ -90,12 +92,52 @@ function msc_activate_plugin() {
         KEY servico_id (servico_id)
     ) $charset_collate;";
 
+    // Tabela de Kanban
+    $sql_kanban = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}msc_kanban (
+        id bigint(20) NOT NULL AUTO_INCREMENT,
+        cliente_id bigint(20) NOT NULL,
+        titulo varchar(255) NOT NULL,
+        data_criacao datetime DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        KEY cliente_id (cliente_id),
+        FOREIGN KEY (cliente_id) REFERENCES {$wpdb->prefix}msc_clientes(id) ON DELETE CASCADE
+    ) $charset_collate;";
+
+    // Tabela de colunas do Kanban
+    $sql_colunas = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}msc_kanban_colunas (
+        id bigint(20) NOT NULL AUTO_INCREMENT,
+        kanban_id bigint(20) NOT NULL,
+        titulo varchar(255) NOT NULL,
+        ordem int NOT NULL DEFAULT 0,
+        PRIMARY KEY (id),
+        KEY kanban_id (kanban_id),
+        FOREIGN KEY (kanban_id) REFERENCES {$wpdb->prefix}msc_kanban(id) ON DELETE CASCADE
+    ) $charset_collate;";
+
+    // Tabela de cartões do Kanban
+    $sql_cartoes = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}msc_kanban_cartoes (
+        id bigint(20) NOT NULL AUTO_INCREMENT,
+        coluna_id bigint(20) NOT NULL,
+        titulo varchar(255) NOT NULL,
+        descricao text,
+        responsavel varchar(255),
+        prazo date,
+        ordem int NOT NULL DEFAULT 0,
+        data_criacao datetime DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        KEY coluna_id (coluna_id),
+        FOREIGN KEY (coluna_id) REFERENCES {$wpdb->prefix}msc_kanban_colunas(id) ON DELETE CASCADE
+    ) $charset_collate;";
+
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql_clientes);
     dbDelta($sql_servicos);
     dbDelta($sql_propostas);
     dbDelta($sql_proposta_itens);
-    
+    dbDelta($sql_kanban);
+    dbDelta($sql_colunas);
+    dbDelta($sql_cartoes);
+
     // Atualizar a estrutura da tabela para adicionar os novos campos
     msc_update_database();
 }
@@ -103,7 +145,8 @@ function msc_activate_plugin() {
 // Plugin deactivation hook
 register_deactivation_hook(__FILE__, 'msc_deactivate_plugin');
 
-function msc_deactivate_plugin() {
+function msc_deactivate_plugin()
+{
     // Código de desativação aqui
 }
 
@@ -113,17 +156,20 @@ require_once plugin_dir_path(__FILE__) . 'includes/admin/adicionar-cliente.php';
 require_once plugin_dir_path(__FILE__) . 'includes/admin/listar-clientes.php';
 require_once plugin_dir_path(__FILE__) . 'includes/admin/servicos.php';
 require_once plugin_dir_path(__FILE__) . 'includes/admin/propostas.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/configuracoes.php';
 require_once plugin_dir_path(__FILE__) . 'includes/admin/adicionar-proposta.php';
+require_once plugin_dir_path(__FILE__) . 'includes/admin/gerar-pdf.php';
+require_once plugin_dir_path(__FILE__) . 'includes/admin/configuracoes.php';
+require_once plugin_dir_path(__FILE__) . 'includes/admin/kanban.php';
+require_once plugin_dir_path(__FILE__) . 'includes/admin/kanban-view.php';
 
 // Adicionar menu ao WordPress admin
 add_action('admin_menu', 'msc_admin_menu');
 
-function msc_admin_menu() {
-    // Menu principal
+function msc_admin_menu()
+{
     add_menu_page(
         'Meu Sistema Clientes',
-        'Clientes',
+        'Meu Sistema Clientes',
         'manage_options',
         'meu-sistema-clientes',
         'msc_render_pagina_principal',
@@ -131,11 +177,10 @@ function msc_admin_menu() {
         30
     );
 
-    // Submenus
     add_submenu_page(
         'meu-sistema-clientes',
-        'Painel',
-        'Painel',
+        'Página Principal',
+        'Página Principal',
         'manage_options',
         'meu-sistema-clientes',
         'msc_render_pagina_principal'
@@ -143,57 +188,65 @@ function msc_admin_menu() {
 
     add_submenu_page(
         'meu-sistema-clientes',
-        'Todos os Clientes',
-        'Todos os Clientes',
-        'manage_options',
-        'meu-sistema-clientes-listar',
-        'msc_render_listar_clientes'
-    );
-
-    add_submenu_page(
-        'meu-sistema-clientes',
         'Adicionar Cliente',
         'Adicionar Cliente',
         'manage_options',
-        'meu-sistema-clientes-adicionar',
+        'msc-adicionar-cliente',
         'msc_render_adicionar_cliente'
     );
 
     add_submenu_page(
         'meu-sistema-clientes',
+        'Listar Clientes',
+        'Listar Clientes',
+        'manage_options',
+        'msc-listar-clientes',
+        'msc_render_listar_clientes'
+    );
+
+    add_submenu_page(
+        'meu-sistema-clientes',
         'Serviços',
         'Serviços',
         'manage_options',
-        'meu-sistema-clientes-servicos',
+        'msc-servicos',
         'msc_render_servicos'
     );
 
-    // Submenu Propostas
     add_submenu_page(
         'meu-sistema-clientes',
         'Propostas',
         'Propostas',
         'manage_options',
-        'meu-sistema-clientes-propostas',
+        'msc-propostas',
         'msc_render_propostas'
     );
 
-    // Páginas ocultas (não aparecem no menu)
+    add_submenu_page(
+        'meu-sistema-clientes',
+        'Kanban',
+        'Kanban',
+        'manage_options',
+        'msc-kanban',
+        'msc_exibir_pagina_kanban'
+    );
+
+    // Página oculta para visualização do Kanban
     add_submenu_page(
         null,
-        'Adicionar Proposta',
-        'Adicionar Proposta',
+        'Visualizar Kanban',
+        'Visualizar Kanban',
         'manage_options',
-        'meu-sistema-clientes-adicionar-proposta',
-        'msc_render_adicionar_proposta'
+        'msc-kanban-view',
+        'msc_exibir_kanban_view'
     );
 
     add_submenu_page(
         'meu-sistema-clientes',
-        'Configurações da Proposta',
-        'Configurações da Proposta',
+        'Configurações',
+        'Configurações',
         'manage_options',
-        'meu-sistema-clientes-configuracoes',
+        'msc-configuracoes',
         'msc_render_configuracoes'
     );
 }
@@ -201,19 +254,33 @@ function msc_admin_menu() {
 // Incluir estilos administrativos
 add_action('admin_enqueue_scripts', 'msc_enqueue_admin_styles');
 
-function msc_enqueue_admin_styles($hook) {
+function msc_enqueue_admin_styles($hook)
+{
     if (strpos($hook, 'meu-sistema-clientes') !== false) {
-        wp_enqueue_style('msc-admin-styles', 
+        wp_enqueue_style(
+            'msc-admin-styles',
             plugins_url('assets/css/admin-style.css', __FILE__),
             array(),
             '1.0.0'
         );
     }
+
+    // jQuery UI para drag and drop
+    wp_enqueue_script('jquery-ui-sortable');
+
+    // Estilos do Kanban
+    wp_enqueue_style(
+        'msc-kanban-styles',
+        plugins_url('assets/css/kanban.css', __FILE__),
+        array(),
+        '1.0.0'
+    );
 }
 
 // Adicionar action AJAX
 add_action('wp_ajax_msc_gerar_pdf', 'msc_ajax_gerar_pdf');
-function msc_ajax_gerar_pdf() {
+function msc_ajax_gerar_pdf()
+{
     if (!isset($_GET['id']) || !isset($_GET['_wpnonce']) || !wp_verify_nonce($_GET['_wpnonce'], 'gerar_pdf_proposta')) {
         wp_die('Acesso inválido');
     }
@@ -227,6 +294,116 @@ function msc_ajax_gerar_pdf() {
 // Initialize plugin
 add_action('plugins_loaded', 'msc_init_plugin');
 
-function msc_init_plugin() {
+function msc_init_plugin()
+{
     // Plugin initialization code here
+}
+
+// Adicionar actions AJAX
+add_action('wp_ajax_msc_excluir_kanban', 'msc_ajax_excluir_kanban');
+add_action('wp_ajax_msc_get_cartao', 'msc_ajax_get_cartao');
+add_action('wp_ajax_msc_salvar_cartao', 'msc_ajax_salvar_cartao');
+add_action('wp_ajax_msc_excluir_cartao', 'msc_ajax_excluir_cartao');
+add_action('wp_ajax_msc_atualizar_cartao_posicao', 'msc_ajax_atualizar_cartao_posicao');
+
+function msc_ajax_excluir_kanban()
+{
+    check_ajax_referer('msc_excluir_kanban', 'nonce');
+    global $wpdb;
+
+    $kanban_id = intval($_POST['kanban_id']);
+
+    // Excluir cartões
+    $wpdb->query($wpdb->prepare("
+        DELETE c FROM {$wpdb->prefix}msc_kanban_cartoes c
+        JOIN {$wpdb->prefix}msc_kanban_colunas col ON c.coluna_id = col.id
+        WHERE col.kanban_id = %d
+    ", $kanban_id));
+
+    // Excluir colunas
+    $wpdb->delete($wpdb->prefix . 'msc_kanban_colunas', array('kanban_id' => $kanban_id));
+
+    // Excluir kanban
+    $wpdb->delete($wpdb->prefix . 'msc_kanban', array('id' => $kanban_id));
+
+    wp_send_json_success();
+}
+
+function msc_ajax_get_cartao()
+{
+    check_ajax_referer('msc_get_cartao', 'nonce');
+    global $wpdb;
+
+    $cartao_id = intval($_POST['cartao_id']);
+    $cartao = $wpdb->get_row($wpdb->prepare("
+        SELECT * FROM {$wpdb->prefix}msc_kanban_cartoes WHERE id = %d
+    ", $cartao_id));
+
+    wp_send_json_success($cartao);
+}
+
+function msc_ajax_salvar_cartao()
+{
+    check_ajax_referer('msc_salvar_cartao', 'nonce');
+    global $wpdb;
+
+    $cartao_id = isset($_POST['cartao_id']) ? intval($_POST['cartao_id']) : 0;
+    $dados = array(
+        'coluna_id' => intval($_POST['coluna_id']),
+        'titulo' => sanitize_text_field($_POST['titulo']),
+        'descricao' => sanitize_textarea_field($_POST['descricao']),
+        'responsavel' => sanitize_text_field($_POST['responsavel']),
+        'prazo' => sanitize_text_field($_POST['prazo'])
+    );
+
+    if ($cartao_id) {
+        $wpdb->update(
+            $wpdb->prefix . 'msc_kanban_cartoes',
+            $dados,
+            array('id' => $cartao_id)
+        );
+    } else {
+        $wpdb->insert($wpdb->prefix . 'msc_kanban_cartoes', $dados);
+    }
+
+    wp_send_json_success();
+}
+
+function msc_ajax_excluir_cartao()
+{
+    check_ajax_referer('msc_excluir_cartao', 'nonce');
+    global $wpdb;
+
+    $cartao_id = intval($_POST['cartao_id']);
+    $wpdb->delete($wpdb->prefix . 'msc_kanban_cartoes', array('id' => $cartao_id));
+
+    wp_send_json_success();
+}
+
+function msc_ajax_atualizar_cartao_posicao()
+{
+    check_ajax_referer('msc_atualizar_cartao_posicao', 'nonce');
+    global $wpdb;
+
+    $cartao_id = intval($_POST['cartao_id']);
+    $coluna_id = intval($_POST['coluna_id']);
+    $nova_ordem = array_map('intval', $_POST['nova_ordem']);
+
+    // Atualizar coluna do cartão
+    $wpdb->update(
+        $wpdb->prefix . 'msc_kanban_cartoes',
+        array('coluna_id' => $coluna_id),
+        array('id' => $cartao_id)
+    );
+
+    // Atualizar ordem dos cartões
+    foreach ($nova_ordem as $ordem => $id) {
+        $wpdb->update(
+            $wpdb->prefix . 'msc_kanban_cartoes',
+            array('ordem' => $ordem),
+            array('id' => $id)
+        );
+    }
+
+    wp_send_json_success();
 }
