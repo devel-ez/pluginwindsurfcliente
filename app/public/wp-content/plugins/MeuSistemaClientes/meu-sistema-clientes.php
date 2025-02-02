@@ -147,7 +147,7 @@ register_deactivation_hook(__FILE__, 'msc_deactivate_plugin');
 
 function msc_deactivate_plugin()
 {
-    // Código de desativação aqui
+    // Limpar dados se necessário
 }
 
 // Incluir arquivos administrativos
@@ -167,6 +167,11 @@ add_action('admin_menu', 'msc_admin_menu');
 
 function msc_admin_menu()
 {
+    // Verificar se o usuário tem permissão
+    if (!current_user_can('manage_options')) {
+        return;
+    }
+
     add_menu_page(
         'Meu Sistema Clientes',
         'Meu Sistema Clientes',
