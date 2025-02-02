@@ -4,6 +4,9 @@ if (!defined('ABSPATH')) {
 }
 
 function msc_render_propostas() {
+    // Debug
+    error_log('Função msc_render_propostas foi chamada');
+    
     global $wpdb;
     
     // Processar exclusão
@@ -52,7 +55,7 @@ function msc_render_propostas() {
     ?>
     <div class="wrap">
         <h1 class="wp-heading-inline">Propostas</h1>
-        <a href="<?php echo admin_url('admin.php?page=meu-sistema-clientes-adicionar-proposta'); ?>" class="page-title-action">
+        <a href="<?php echo admin_url('admin.php?page=msc-adicionar-proposta'); ?>" class="page-title-action">
             <span class="dashicons dashicons-plus-alt2"></span> Nova Proposta
         </a>
         <hr class="wp-header-end">
@@ -62,7 +65,7 @@ function msc_render_propostas() {
                 <span class="dashicons dashicons-clipboard"></span>
                 <h2>Nenhuma proposta encontrada</h2>
                 <p>Comece criando sua primeira proposta!</p>
-                <a href="<?php echo admin_url('admin.php?page=meu-sistema-clientes-adicionar-proposta'); ?>" class="button button-primary">
+                <a href="<?php echo admin_url('admin.php?page=msc-adicionar-proposta'); ?>" class="button button-primary">
                     Criar Proposta
                 </a>
             </div>
@@ -98,7 +101,7 @@ function msc_render_propostas() {
                                 </button>
                                 <div class="proposta-menu">
                                     <div class="proposta-acoes">
-                                        <a href="<?php echo admin_url('admin.php?page=meu-sistema-clientes-adicionar-proposta&id=' . $p->id); ?>" class="button">
+                                        <a href="<?php echo admin_url('admin.php?page=msc-adicionar-proposta&id=' . $p->id); ?>" class="button">
                                             <span class="dashicons dashicons-edit"></span>
                                             Editar
                                         </a>

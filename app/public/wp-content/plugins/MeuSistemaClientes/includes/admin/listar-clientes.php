@@ -135,6 +135,9 @@ class MSC_Clientes_List_Table extends WP_List_Table {
 }
 
 function msc_render_listar_clientes() {
+    // Debug
+    error_log('Função msc_render_listar_clientes foi chamada');
+    
     global $wpdb;
     $table_name = $wpdb->prefix . 'msc_clientes';
     

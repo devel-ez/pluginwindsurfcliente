@@ -151,16 +151,28 @@ function msc_deactivate_plugin()
 }
 
 // Incluir arquivos administrativos
-require_once plugin_dir_path(__FILE__) . 'includes/admin/pagina-principal.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/adicionar-cliente.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/listar-clientes.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/servicos.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/propostas.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/adicionar-proposta.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/gerar-pdf.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/configuracoes.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/kanban.php';
-require_once plugin_dir_path(__FILE__) . 'includes/admin/kanban-view.php';
+$admin_files = [
+    'pagina-principal.php',
+    'adicionar-cliente.php',
+    'listar-clientes.php',
+    'servicos.php',
+    'propostas.php',
+    'adicionar-proposta.php',
+    'gerar-pdf.php',
+    'configuracoes.php',
+    'kanban.php',
+    'kanban-view.php'
+];
+
+foreach ($admin_files as $file) {
+    $file_path = plugin_dir_path(__FILE__) . 'includes/admin/' . $file;
+    if (file_exists($file_path)) {
+        require_once $file_path;
+        error_log('Arquivo carregado com sucesso: ' . $file);
+    } else {
+        error_log('ERRO: Arquivo não encontrado: ' . $file);
+    }
+}
 
 // Adicionar menu ao WordPress admin
 add_action('admin_menu', 'msc_admin_menu');
@@ -225,6 +237,16 @@ function msc_admin_menu()
         'manage_options',
         'msc-propostas',
         'msc_render_propostas'
+    );
+
+    // Página oculta para adicionar/editar proposta
+    add_submenu_page(
+        null, // null significa que não aparecerá no menu
+        'Adicionar/Editar Proposta',
+        'Adicionar/Editar Proposta',
+        'manage_options',
+        'msc-adicionar-proposta',
+        'msc_render_adicionar_proposta'
     );
 
     add_submenu_page(
